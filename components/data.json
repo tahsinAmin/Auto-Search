@@ -1,4 +1,4 @@
-const d2 = {
+{
   "code": "SUCCESS",
   "message": "Airport found.",
   "response": [

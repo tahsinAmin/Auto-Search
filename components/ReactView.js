@@ -1,9 +1,11 @@
 import React from "react";
+import { FaPlaneDeparture, FaWarehouse } from "react-icons/fa";
 
 export default function ReactView() {
   return (
-    <div>
-      <nav className="bg-blue-900 text-white flex justify-between items-center px-4 py-4">
+    // <div className="bg-gray-800">
+    <div className="">
+      {/* <nav className="bg-blue-900 text-white flex justify-between items-center px-4 py-4">
         <div className="logo">
           <img
             className="max-w-full nav-row-logo"
@@ -14,7 +16,8 @@ export default function ReactView() {
             height="26"
           />
         </div>
-        <div className="others hidden sm:block flex space-x-4">
+        
+        <div className="others sm:block flex space-x-4">
           <a href="" className="tracking-wider font-regular text-lg">
             Rentals
             <i className="fas fa-chevron-down"></i>
@@ -54,7 +57,7 @@ export default function ReactView() {
         6h16M4 12h16M4 18h16"
           />
         </svg>
-      </nav>
+      </nav> */}
       <div
         className="
         hero
@@ -170,19 +173,29 @@ export default function ReactView() {
         </div>
       </div>
       <main className="container max-w-7xl mx-auto mt-10">
-        <section className="weather">
-          <h1 className="text-3xl font-bold">
-            Weather forecast today in Vancouvar, Canada
-          </h1>
+        {/* <section className="weather">
+          <h1 className="text-3xl font-bold">Select departing flights</h1>
+          <div className="flex space-x-8 mt-4 items-center">
+            <div className="flex space-x-4">
+              <FaPlaneDeparture />
+              <h2>
+                <b>Hong Kong</b> to <b>Las Vegas</b>
+              </h2>
+            </div>
+            <span>
+              Wed <b>17 Nov</b>
+            </span>
+          </div>
           <div
             className="
             display-weather
-            my-5
+            
             rounded-lg
             h-[245px]
             grid grid-cols-4
             gap-4
             p-4
+            drop-shadow-xl
           "
           >
             <div
@@ -313,17 +326,17 @@ export default function ReactView() {
                     ></path>
                   </svg>
                 </div>
-                <div className="text-2xl font-semibold">OVernight</div>
+                <div className="text-2xl font-semibold">Overnight</div>
               </div>
               <div className="temp text-[100px] font-light">9°</div>
             </div>
           </div>
-        </section>
-        <section className="bflex flex-col space-y-4 border-gray-200 text-xl">
+        </section> */}
+        <section className="flex flex-col space-y-4 mt-4 border-gray-200 text-lg">
           <div className="sort-flights flex space-x-6">
             <span className="text-gray-600">Sort by: </span>
             <div className="flex space-x-10 text-blue-600">
-              <span className="underline active text-gray-700 font-semibold underline">
+              <span className="underline active text-gray-700 font-semibold">
                 Recommended
               </span>
               <span>Duration</span>
@@ -339,57 +352,49 @@ export default function ReactView() {
               justify-between
               bg-gray-400
               mb-10
-              border border-2
+              border-2
               rounded-xl
-              p-4
+              p-3
             "
             >
               <div className="flex flex-col space-y-2">
                 <div className="badge flex justify-left text-white">
                   <div
-                    className="
-                    badge
-                    flex
+                    className="badge
+                    flex space-x-4 items-center
                     bg-gray-800
                     text-white text-xs
                     font-light
                     py-1.5
                     px-3
-                    items-center
-                    space-x-1
                     rounded-full
                   "
                   >
-                    <svg
-                      className="w-4 h-4"
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-                      ></path>
-                      <path
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        stroke-width="2"
-                        d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-                      ></path>
-                    </svg>
-                    <span className="font-semibold rounded">
-                      {" "}
-                      Agadir | Morocco
+                    <FaWarehouse className="h-3 w-3" />
+                    <span className="font-medium rounded">
+                      Hazrat Shahjalal International Airport (DAC)
                     </span>
                   </div>
                 </div>
-                <div className="flight-item-info px-2.5 flex">
-                  <div>Flight 1</div>
-                  <div>icon</div>
-                  <div>Flight 2</div>
+                <div className="flight-item-info px-2.5 flex justify-between items-center">
+                  <div className="flex flex-col items-center ">
+                    <div>00:15</div>
+                    <div>DAC</div>
+                  </div>
+                  <div>
+                    <img
+                      className="max-w-full nav-row-logo"
+                      loading="lazy"
+                      src="/img/car-direction.png"
+                      alt="rentByOwner"
+                      width="182"
+                      height="26"
+                    />
+                  </div>
+                  <div className="flex flex-col items-center ">
+                    <div>00:50</div>
+                    <div>VAN</div>
+                  </div>
                 </div>
               </div>
               <div

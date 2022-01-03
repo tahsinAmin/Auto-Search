@@ -7,8 +7,8 @@
 - [x] Bring the design in one place
 - [x] Showing the city name in capiatl letter
 - [ ] Use of Frmaer Motipon to bounce weather icons
--
--
+- [ ] Search Fligth btton needs to be moveable once clicked
+- [ ] Must replace bus icon wqith plane icon
 
 ## Npm pakages needed
 
