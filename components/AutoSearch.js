@@ -38,14 +38,26 @@ function AutoSearch() {
     e.preventDefault();
 
     try {
-      const response = await axios.get(
-        `https://api.weatherapi.com/v1/history.json?key=e6a73467a3e94aa184c122435212812&q=canada&q=${text}&dt=2021.12.30&aqi=yes`
-      );
-      let list = [];
-      console.log(response.data.forecast);
-      list = response.data.forecast.hour;
-      console.log(list);
-      setWeatherForecast(response.data.forecast);
+      axios
+        .get(
+          `https://api.weatherapi.com/v1/history.json?key=e6a73467a3e94aa184c122435212812&q=canada&q=vancouvar&dt=2021.12.30&aqi=yes`
+        )
+        .then((res) => {
+          // console.log(res.data.forecast.forecastday);
+          const fetch_data = res.data.forecast.forecastday[0].hour;
+          console.log(res.data.forecast.forecastday[0].hour);
+          setWeatherForecast(fetch_data);
+          console.log(weatherForecast);
+        });
+
+      // const response = await axios.get(
+      //   `https://api.weatherapi.com/v1/history.json?key=e6a73467a3e94aa184c122435212812&q=canada&q=${text}&dt=2021.12.30&aqi=yes`
+      // );
+      // let list = [];
+      // console.log(response.data.forecast);
+      // list = response.data.forecast.hour;
+      // console.log(list);
+      // setWeatherForecast(response.data.forecast);
     } catch (error) {
       if (error.response) {
         // get response with a status code not in range 2xx
@@ -79,13 +91,13 @@ function AutoSearch() {
   console.log("hello" + weatherForecast);
   return (
     <div>
-      <form className='flex' onSubmit={(e) => handleSubmit(e)}>
-        <div className='container mx-auto'>
+      <form className="flex" onSubmit={(e) => handleSubmit(e)}>
+        <div className="container mx-auto">
           <input
-            type='text'
-            name='input-search'
-            className='border rounded-sm w-full mt-4'
-            placeholder='Search....'
+            type="text"
+            name="input-search"
+            className="border rounded-sm w-full mt-4"
+            placeholder="Search...."
             onChange={(e) => onChangeHandler(e.target.value)}
             value={text}
             onBlur={() => {
@@ -97,7 +109,7 @@ function AutoSearch() {
           {suggestions &&
             suggestions.map((suggestion, i) => (
               <div
-                className='border w-full cursor-pointer border-b-1 hover:bg-blue-100 border-l-1 border-r-1'
+                className="border w-full cursor-pointer border-b-1 hover:bg-blue-100 border-l-1 border-r-1"
                 key={i}
                 onClick={() => onSuggestHandler(suggestion.city)}
               >
@@ -106,8 +118,8 @@ function AutoSearch() {
             ))}
         </div>
         <button
-          type='submit'
-          className='text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center'
+          type="submit"
+          className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
         >
           Submit
         </button>
