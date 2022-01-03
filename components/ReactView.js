@@ -1,10 +1,11 @@
 import React from "react";
+
 import { FaPlaneDeparture, FaWarehouse } from "react-icons/fa";
 
 export default function ReactView() {
   return (
     // <div className="bg-gray-800">
-    <div className="">
+    <div className=''>
       {/* <nav className="bg-blue-900 text-white flex justify-between items-center px-4 py-4">
         <div className="logo">
           <img
@@ -70,9 +71,9 @@ export default function ReactView() {
         p-10
       "
       >
-        <div className="badge flex justify-end text-white">
+        <div className='badge flex justify-end text-white'>
           <div
-            className="
+            className='
             badge
             flex
             bg-gray-800
@@ -83,34 +84,34 @@ export default function ReactView() {
             items-center
             space-x-1
             rounded-full
-          "
+          '
           >
             <svg
-              className="w-4 h-4"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
+              className='w-4 h-4'
+              fill='none'
+              stroke='currentColor'
+              viewBox='0 0 24 24'
+              xmlns='http://www.w3.org/2000/svg'
             >
               <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                strokeWidth='2'
+                d='M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z'
               ></path>
               <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
+                strokeLinecap='round'
+                strokeLinejoin='round'
+                strokeWidth='2'
+                d='M15 11a3 3 0 11-6 0 3 3 0 016 0z'
               ></path>
             </svg>
-            <span className="font-semibold rounded"> Agadir | Morocco</span>
+            <span className='font-semibold rounded'> Agadir | Morocco</span>
           </div>
         </div>
-        <div className="input-form flex justify-left w-1/2">
+        <div className='input-form flex justify-left w-1/2'>
           <div
-            className="
+            className='
             input
             p-4
             px-8
@@ -120,59 +121,59 @@ export default function ReactView() {
             text-black
             flex flex-col
             space-y-10
-          "
+          '
           >
-            <h1 className="text-3xl font-bold">
+            <h1 className='text-3xl font-bold'>
               Uncover best flights with RentByOwner
-              <sup className="text-sm">TM</sup>
+              <sup className='text-sm'>TM</sup>
             </h1>
-            <div className="grid grid-cols-2 gap-1">
+            <div className='grid grid-cols-2 gap-1'>
               <input
-                type="text"
-                placeholder="Going from?"
-                className="
+                type='text'
+                placeholder='Going from?'
+                className='
                 border
                 p-1
                 border-3 border-gray-600 border-t-0 border-l-0 border-r-0
-              "
+              '
               />
               <input
-                type="text"
-                placeholder="Going to?"
-                className="
+                type='text'
+                placeholder='Going to?'
+                className='
                 border
                 p-1
                 border-3 border-gray-600 border-t-0 border-l-0 border-r-0
-              "
+              '
               />
               <input
-                type="text"
-                placeholder="Depart date?"
-                className="
+                type='text'
+                placeholder='Depart date?'
+                className='
                 border
                 p-1
                 border-3 border-gray-600 border-t-0 border-l-0 border-r-0
-              "
+              '
               />
               <input
-                type="text"
-                placeholder="Return Date"
-                className="
+                type='text'
+                placeholder='Return Date'
+                className='
                 border
                 p-1
                 border-3 border-gray-600 border-t-0 border-l-0 border-r-0
-              "
+              '
               />
             </div>
             <div>
-              <button className="bg-gray-700 text-white font-semibold p-2 rounded-lg">
+              <button className='bg-gray-700 text-white font-semibold p-2 rounded-lg'>
                 Search Flights
               </button>
             </div>
           </div>
         </div>
       </div>
-      <main className="container max-w-7xl mx-auto mt-10">
+      <main className='container max-w-7xl mx-auto mt-10'>
         {/* <section className="weather">
           <h1 className="text-3xl font-bold">Select departing flights</h1>
           <div className="flex space-x-8 mt-4 items-center">
@@ -332,21 +333,21 @@ export default function ReactView() {
             </div>
           </div>
         </section> */}
-        <section className="flex flex-col space-y-4 mt-4 border-gray-200 text-lg">
-          <div className="sort-flights flex space-x-6">
-            <span className="text-gray-600">Sort by: </span>
-            <div className="flex space-x-10 text-blue-600">
-              <span className="underline active text-gray-700 font-semibold">
+        <section className='flex flex-col space-y-4 mt-4 border-gray-200 text-lg'>
+          <div className='sort-flights flex space-x-6'>
+            <span className='text-gray-600'>Sort by: </span>
+            <div className='flex space-x-10 text-blue-600'>
+              <span className='underline active text-gray-700 font-semibold'>
                 Recommended
               </span>
               <span>Duration</span>
               <span>Cheapest</span>
             </div>
           </div>
-          <div className="flights-found">5 flights found</div>
-          <div className="flight-lists flex flex-col space-y-2">
+          <div className='flights-found'>5 flights found</div>
+          <div className='flight-lists flex flex-col space-y-2'>
             <div
-              className="
+              className='
               flight-list-item
               flex
               justify-between
@@ -355,12 +356,12 @@ export default function ReactView() {
               border-2
               rounded-xl
               p-3
-            "
+            '
             >
-              <div className="flex flex-col space-y-2">
-                <div className="badge flex justify-left text-white">
+              <div className='flex flex-col space-y-2'>
+                <div className='badge flex justify-left text-white'>
                   <div
-                    className="badge
+                    className='badge
                     flex space-x-4 items-center
                     bg-gray-800
                     text-white text-xs
@@ -368,37 +369,37 @@ export default function ReactView() {
                     py-1.5
                     px-3
                     rounded-full
-                  "
+                  '
                   >
-                    <FaWarehouse className="h-3 w-3" />
-                    <span className="font-medium rounded">
+                    <FaWarehouse className='h-3 w-3' />
+                    <span className='font-medium rounded'>
                       Hazrat Shahjalal International Airport (DAC)
                     </span>
                   </div>
                 </div>
-                <div className="flight-item-info px-2.5 flex justify-between items-center">
-                  <div className="flex flex-col items-center ">
+                <div className='flight-item-info px-2.5 flex justify-between items-center'>
+                  <div className='flex flex-col items-center '>
                     <div>00:15</div>
                     <div>DAC</div>
                   </div>
                   <div>
                     <img
-                      className="max-w-full nav-row-logo"
-                      loading="lazy"
-                      src="/img/car-direction.png"
-                      alt="rentByOwner"
-                      width="182"
-                      height="26"
+                      className='max-w-full nav-row-logo'
+                      loading='lazy'
+                      src='/img/car-direction.png'
+                      alt='rentByOwner'
+                      width='182'
+                      height='26'
                     />
                   </div>
-                  <div className="flex flex-col items-center ">
+                  <div className='flex flex-col items-center '>
                     <div>00:50</div>
                     <div>VAN</div>
                   </div>
                 </div>
               </div>
               <div
-                className="
+                className='
                 flex flex-col
                 items-center
                 space-y-4
@@ -406,10 +407,10 @@ export default function ReactView() {
                 px-4
                 justify-center
                 py-2
-              "
+              '
               >
-                <div className="text-4xl font-semibold">৳ 91,000</div>
-                <button className="bg-gray-700 text-white font-medium p-2 px-4 rounded-lg">
+                <div className='text-4xl font-semibold'>৳ 91,000</div>
+                <button className='bg-gray-700 text-white font-medium p-2 px-4 rounded-lg'>
                   View Details
                 </button>
               </div>
