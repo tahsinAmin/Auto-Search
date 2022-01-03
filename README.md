@@ -4,7 +4,15 @@
 - Using 2 fetches
 - showing country name
 - showiung weather data
+- [x] Bring the design in one place
 - [x] Showing the city name in capiatl letter
+- [ ] Use of Frmaer Motipon to bounce weather icons
+-
+-
+
+## Npm pakages needed
+
+- react-icons
 
 ## Problems and solution
 
