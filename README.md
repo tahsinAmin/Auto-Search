@@ -9,8 +9,12 @@
 - [x] Able to Fetch data from local json file in ReactJS
 - [x] Able to show json data in page
 - [ ] Use of Frmaer Motipon to bounce weather icons
-- [ ] Search Fligth btton needs to be moveable once clicked
+- [ ] Search Fligth button needs to be moveable once clicked
 - [ ] Must replace bus icon wqith plane icon
+
+## Tiny tasks
+
+- [ ] Remove countreyName variable if not needed
 
 ## Npm pakages needed
 
@@ -31,8 +35,10 @@
 - [x] Json fil data recieved but not able to show the data using ".map()". Sol: Used '{}' instead of '()' after '=>'
 - [ ] When I type, the heading also changes with it.
 - [ ] when I hit search button twice, it gives an error. Probably due to "Dhaka" and not "dhaka"
+- [ ] how to remove defualt date icon from date-input
 
 ## What I learned
 
 - How to write a callback function
 - How to write a class component
+- How to read local json file in ReactJS

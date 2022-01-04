@@ -4,7 +4,8 @@ import data from "./data/flights.json";
 
 export default class AutoS1 extends React.Component {
   state = {
-    cityName: "",
+    fromCity: "",
+    toCity: "",
     tempDay: [],
     weatherFound: false,
     countryName: "",
@@ -13,51 +14,48 @@ export default class AutoS1 extends React.Component {
   };
   render() {
     const {
-      cityName,
+      fromCity,
+      toCity,
       weatherFound,
       tempDay,
       countryName,
       flightsFound,
       allFlights,
     } = this.state;
-    const searchFlights = () => {
+    const addItem = () => {
       console.log("Hello");
       axios
         .get(
-          `https://api.sharetrip.net/api/v1/flight/search/airport?name=${cityName}`
+          `https://api.sharetrip.net/api/v1/flight/search/airport?name=${toCity}`
         )
         .then((res) => {
-          const result1 = res.data.response[0].name.split(",")[0];
-          this.setState(
-            { countryName: result1, cityName: res.data.response[0].city },
-            () => {
-              this.setState(
-                {
-                  allFlights:
-                    data[0][this.state.countryName]["2022-01-10"][cityName]
-                      .vancouvar,
-                  flightsFound: true,
-                },
-                () => {
-                  console.log(
-                    cityName,
-                    this.state.countryName,
-                    this.state.flightsFound,
-                    this.state.allFlights
-                  );
-                  console.log(
-                    data[0][this.state.countryName]["2022-01-10"][cityName]
-                      .vancouvar[0].duration
-                  );
-                }
-              );
-            }
-          );
+          const getCountryName = res.data.response[0].name.split(",")[0];
+          this.setState({ countryName: getCountryName }, () => {
+            this.setState(
+              {
+                allFlights:
+                  data[0]["2022-01-10"][this.state.countryName][toCity].canada
+                    .vancouvar,
+                flightsFound: true,
+              },
+              () => {
+                console.log(
+                  toCity,
+                  this.state.countryName,
+                  this.state.allFlights
+                );
+                console.log(
+                  data[0]["2022-01-10"][this.state.countryName][toCity].canada
+                    .vancouvar[0].duration
+                );
+              }
+            );
+          });
         });
 
       axios
         .get(
-          `https://api.weatherapi.com/v1/history.json?key=e6a73467a3e94aa184c122435212812&q=canada&q=${cityName}&dt=2021.12.30&aqi=yes`
+          `https://api.weatherapi.com/v1/history.json?key=e6a73467a3e94aa184c122435212812&q=canada&q=${toCity}&dt=2021.12.30&aqi=yes`
         )
         .then((res) => {
           const hour = res.data.forecast.forecastday[0].hour;
@@ -112,18 +110,35 @@ export default class AutoS1 extends React.Component {
       <div>
         <input
           type="text"
-          value={cityName}
-          onChange={(e) => this.setState({ cityName: e.target.value })}
-          placeholder="cityName..."
+          value={fromCity}
+          onChange={(e) => this.setState({ fromCity: e.target.value })}
+          placeholder="fromCity..."
           className="border-2 border-gray-600 p-2 rounded-md"
         />
-        <button onClick={searchFlights}>Search flights</button>
+        <input
+          type="text"
+          value={toCity}
+          onChange={(e) => this.setState({ toCity: e.target.value })}
+          placeholder="toCity..."
+          className="border-2 border-gray-600 p-2 rounded-md"
+        />
+        <input
+          type="date"
+          onChange={(e) => this.setState({ toDate: e.target.value })}
+          placeholder="toDate..."
+          className="border-2 border-gray-600 p-2 rounded-md"
+        />
+        <button onClick={addItem}>Search</button>
 
         {weatherFound && (
           <section className="weather">
             <h1 className="text-3xl font-bold">
-              Weather forecast today in {cityName}, {countryName}
+              Select departing flights
+              {/* Weather forecast today in {toCity}, {countryName} */}
             </h1>
+            <div>
+              {fromCity} to {toCity}
+            </div>
             <div
               className="
             display-weather
@@ -279,9 +294,13 @@ export default class AutoS1 extends React.Component {
           </section>
         )}
 
-        <section>
-          {flightsFound && allFlights.map((f) => <p>{f["duration"]}</p>)}
-        </section>
+        {flightsFound && (
+          <section>
+            {allFlights.map((f) => (
+              <p>{f["duration"]}</p>
+            ))}
+          </section>
+        )}
       </div>
     );
   }

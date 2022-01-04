@@ -7,7 +7,7 @@ import AutoS1 from "../components/AutoS1";
 
 export default function Home() {
   return (
-    <div className='App h-screen'>
+    <div className="App h-screen">
       {/* <AutoSearch /> */}
       {/* <PersonList /> */}
       {/* <AutoClass /> */}

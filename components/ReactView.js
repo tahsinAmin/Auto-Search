@@ -5,7 +5,7 @@ import { FaPlaneDeparture, FaWarehouse } from "react-icons/fa";
 export default function ReactView() {
   return (
     // <div className="bg-gray-800">
-    <div className=''>
+    <div className="">
       {/* <nav className="bg-blue-900 text-white flex justify-between items-center px-4 py-4">
         <div className="logo">
           <img
@@ -71,9 +71,9 @@ export default function ReactView() {
         p-10
       "
       >
-        <div className='badge flex justify-end text-white'>
+        <div className="badge flex justify-end text-white">
           <div
-            className='
+            className="
             badge
             flex
             bg-gray-800
@@ -84,34 +84,34 @@ export default function ReactView() {
             items-center
             space-x-1
             rounded-full
-          '
+          "
           >
             <svg
-              className='w-4 h-4'
-              fill='none'
-              stroke='currentColor'
-              viewBox='0 0 24 24'
-              xmlns='http://www.w3.org/2000/svg'
+              className="w-4 h-4"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
             >
               <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                strokeWidth='2'
-                d='M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z'
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
               ></path>
               <path
-                strokeLinecap='round'
-                strokeLinejoin='round'
-                strokeWidth='2'
-                d='M15 11a3 3 0 11-6 0 3 3 0 016 0z'
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth="2"
+                d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
               ></path>
             </svg>
-            <span className='font-semibold rounded'> Agadir | Morocco</span>
+            <span className="font-semibold rounded"> Agadir | Morocco</span>
           </div>
         </div>
-        <div className='input-form flex justify-left w-1/2'>
+        <div className="input-form flex justify-left w-1/2">
           <div
-            className='
+            className="
             input
             p-4
             px-8
@@ -121,63 +121,63 @@ export default function ReactView() {
             text-black
             flex flex-col
             space-y-10
-          '
+          "
           >
-            <h1 className='text-3xl font-bold'>
+            <h1 className="text-4xl font-bold">
               Uncover best flights with RentByOwner
-              <sup className='text-sm'>TM</sup>
+              <sup className="text-sm">TM</sup>
             </h1>
-            <div className='grid grid-cols-2 gap-1'>
+            <div className="grid grid-cols-2 gap-1">
               <input
-                type='text'
-                placeholder='Going from?'
-                className='
+                type="text"
+                placeholder="Going from?"
+                className="
                 border
                 p-1
                 border-3 border-gray-600 border-t-0 border-l-0 border-r-0
-              '
+              "
               />
               <input
-                type='text'
-                placeholder='Going to?'
-                className='
+                type="text"
+                placeholder="Going to?"
+                className="
                 border
                 p-1
                 border-3 border-gray-600 border-t-0 border-l-0 border-r-0
-              '
+              "
               />
               <input
-                type='text'
-                placeholder='Depart date?'
-                className='
+                type="text"
+                placeholder="Depart date?"
+                className="
                 border
                 p-1
                 border-3 border-gray-600 border-t-0 border-l-0 border-r-0
-              '
+              "
               />
               <input
-                type='text'
-                placeholder='Return Date'
-                className='
+                type="text"
+                placeholder="Return Date"
+                className="
                 border
                 p-1
                 border-3 border-gray-600 border-t-0 border-l-0 border-r-0
-              '
+              "
               />
             </div>
             <div>
-              <button className='bg-gray-700 text-white font-semibold p-2 rounded-lg'>
+              <button className="bg-gray-700 text-white font-semibold p-2 rounded-lg">
                 Search Flights
               </button>
             </div>
           </div>
         </div>
       </div>
-      <main className='container max-w-7xl mx-auto mt-10'>
-        <section className='weather'>
-          <h1 className='text-3xl font-bold'>Select departing flights</h1>
-          <div className='flex space-x-8 mt-4 items-center'>
-            <div className='flex space-x-4'>
+      <main className="container max-w-7xl mx-auto mt-10">
+        <section className="weather">
+          <h1 className="text-xl font-bold">Select departing flights</h1>
+          <div className="flex space-x-8 mt-4 items-center">
+            <div className="flex space-x-4">
               <FaPlaneDeparture />
               <h2>
                 <b>Hong Kong</b> to <b>Las Vegas</b>
@@ -188,7 +188,7 @@ export default function ReactView() {
             </span>
           </div>
           <div
-            className='
+            className="
             display-weather
             
             rounded-lg
@@ -197,10 +197,10 @@ export default function ReactView() {
             gap-4
             p-4
             drop-shadow-xl
-          '
+          "
           >
             <div
-              className='
+              className="
               rounded-lg
               flex
               justify-between
@@ -209,31 +209,31 @@ export default function ReactView() {
               p-auto
               items-center
               space-x-1
-            '
+            "
             >
-              <div className='icon-text flex flex-col items-center'>
-                <div className='icon'>
+              <div className="icon-text flex flex-col items-center">
+                <div className="icon">
                   <svg
-                    className='w-6 h-6'
-                    fill='none'
-                    stroke='currentColor'
-                    viewBox='0 0 24 24'
-                    xmlns='http://www.w3.org/2000/svg'
+                    className="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      stroke-linecap='round'
-                      stroke-linejoin='round'
-                      stroke-width='2'
-                      d='M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z'
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
                     ></path>
                   </svg>
                 </div>
-                <div className='text-2xl font-semibold'>Morning</div>
+                <div className="text-2xl font-semibold">Morning</div>
               </div>
-              <div className='temp text-[100px] font-light'>14°</div>
+              <div className="temp text-[100px] font-light">14°</div>
             </div>
             <div
-              className='
+              className="
               rounded-lg
               flex
               justify-between
@@ -242,18 +242,18 @@ export default function ReactView() {
               p-auto
               items-center
               space-x-1
-            '
+            "
             >
-              <div className='icon-text flex flex-col items-center'>
-                <div className='icon'>
-                  <img src='/svg/cloud.svg' alt='' />
+              <div className="icon-text flex flex-col items-center">
+                <div className="icon">
+                  <img src="/svg/cloud.svg" alt="" />
                 </div>
-                <div className='text-2xl font-semibold'>Afternoon</div>
+                <div className="text-2xl font-semibold">Afternoon</div>
               </div>
-              <div className='temp text-[100px] font-light'>4°</div>
+              <div className="temp text-[100px] font-light">4°</div>
             </div>
             <div
-              className='
+              className="
               rounded-lg
               flex
               justify-between
@@ -262,20 +262,20 @@ export default function ReactView() {
               p-auto
               items-center
               space-x-1
-            '
+            "
             >
-              <div className='icon-text flex flex-col items-center'>
-                <div className='icon'>
-                  <div className='icon'>
-                    <img src='/svg/cloud-drizzle.svg' alt='' />
+              <div className="icon-text flex flex-col items-center">
+                <div className="icon">
+                  <div className="icon">
+                    <img src="/svg/cloud-drizzle.svg" alt="" />
                   </div>
                 </div>
-                <div className='text-2xl font-semibold'>Evening</div>
+                <div className="text-2xl font-semibold">Evening</div>
               </div>
-              <div className='temp text-[100px] font-light'>27°</div>
+              <div className="temp text-[100px] font-light">27°</div>
             </div>
             <div
-              className='
+              className="
               rounded-lg
               flex
               justify-between
@@ -284,46 +284,64 @@ export default function ReactView() {
               p-auto
               items-center
               space-x-1
-            '
+            "
             >
-              <div className='icon-text flex flex-col items-center'>
-                <div className='icon'>
+              <div className="icon-text flex flex-col items-center">
+                <div className="icon">
                   <svg
-                    className='w-6 h-6'
-                    fill='none'
-                    stroke='currentColor'
-                    viewBox='0 0 24 24'
-                    xmlns='http://www.w3.org/2000/svg'
+                    className="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
                   >
                     <path
-                      stroke-linecap='round'
-                      stroke-linejoin='round'
-                      stroke-width='2'
-                      d='M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z'
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
                     ></path>
                   </svg>
                 </div>
-                <div className='text-2xl font-semibold'>Overnight</div>
+                <div className="text-2xl font-semibold">Overnight</div>
               </div>
-              <div className='temp text-[100px] font-light'>9°</div>
+              <div className="temp text-[100px] font-light">9°</div>
             </div>
           </div>
         </section>
-        <section className='flex flex-col space-y-4 mt-4 border-gray-200 text-lg'>
-          <div className='sort-flights flex space-x-6'>
-            <span className='text-gray-600'>Sort by: </span>
-            <div className='flex space-x-10 text-blue-600'>
-              <span className='underline active text-gray-700 font-semibold'>
-                Recommended
-              </span>
-              <span>Duration</span>
-              <span>Cheapest</span>
-            </div>
+        <section className="flex ">
+          <div className="filter w-4/12 mt-4 flex items-start space-x-2 border-r-2 mr-4">
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"
+              ></path>
+            </svg>
+            <h2 className="text-2xl font-medium">Filter by:</h2>
           </div>
-          <div className='flights-found'>5 flights found</div>
-          <div className='flight-lists flex flex-col space-y-2'>
-            <div
-              className='
+          <div className="all-flights w-8/12 flex flex-col space-y-4 mt-4 border-gray-200 text-lg">
+            <div className="sort-flights flex space-x-6">
+              <span className="text-gray-600">Sort by: </span>
+              <div className="flex space-x-10 text-blue-600">
+                <span className="underline active text-gray-700 font-semibold">
+                  Recommended
+                </span>
+                <span>Duration</span>
+                <span>Cheapest</span>
+              </div>
+            </div>
+            <div className="flights-found">5 flights found</div>
+            <div className="flight-lists flex flex-col space-y-2">
+              <div
+                className="
               flight-list-item
               flex
               justify-between
@@ -332,12 +350,12 @@ export default function ReactView() {
               border-2
               rounded-xl
               p-3
-            '
-            >
-              <div className='flex flex-col space-y-2'>
-                <div className='badge flex justify-left text-white'>
-                  <div
-                    className='badge
+            "
+              >
+                <div className="flex flex-col space-y-2">
+                  <div className="badge flex justify-left text-white">
+                    <div
+                      className="badge
                     flex space-x-4 items-center
                     bg-gray-800
                     text-white text-xs
@@ -345,37 +363,37 @@ export default function ReactView() {
                     py-1.5
                     px-3
                     rounded-full
-                  '
-                  >
-                    <FaWarehouse className='h-3 w-3' />
-                    <span className='font-medium rounded'>
-                      Hazrat Shahjalal International Airport (DAC)
-                    </span>
+                  "
+                    >
+                      <FaWarehouse className="h-3 w-3" />
+                      <span className="font-medium rounded">
+                        Hazrat Shahjalal International Airport (DAC)
+                      </span>
+                    </div>
+                  </div>
+                  <div className="flight-item-info px-2.5 flex justify-between items-center">
+                    <div className="flex flex-col items-center text-center">
+                      <div className="text-5xl font-regular">00:15</div>
+                      <div className="text-3xl font-light">DAC</div>
+                    </div>
+                    <div>
+                      <img
+                        className="max-w-full nav-row-logo"
+                        loading="lazy"
+                        src="/img/car-direction.png"
+                        alt="rentByOwner"
+                        width="182"
+                        height="26"
+                      />
+                    </div>
+                    <div className="flex flex-col items-center text-center">
+                      <div className="text-5xl font-regular">00:50</div>
+                      <div className="text-3xl font-light">VAN</div>
+                    </div>
                   </div>
                 </div>
-                <div className='flight-item-info px-2.5 flex justify-between items-center'>
-                  <div className='flex flex-col items-center text-center'>
-                    <div className='text-5xl font-regular'>00:15</div>
-                    <div className='text-3xl font-light'>DAC</div>
-                  </div>
-                  <div>
-                    <img
-                      className='max-w-full nav-row-logo'
-                      loading='lazy'
-                      src='/img/car-direction.png'
-                      alt='rentByOwner'
-                      width='182'
-                      height='26'
-                    />
-                  </div>
-                  <div className='flex flex-col items-center '>
-                    <div>00:50</div>
-                    <div>VAN</div>
-                  </div>
-                </div>
-              </div>
-              <div
-                className='
+                <div
+                  className="
                 flex flex-col
                 items-center
                 space-y-4
@@ -383,12 +401,13 @@ export default function ReactView() {
                 px-4
                 justify-center
                 py-2
-              '
-              >
-                <div className='text-4xl font-semibold'>৳ 91,000</div>
-                <button className='bg-gray-700 text-white font-medium p-2 px-4 rounded-lg'>
-                  View Details
-                </button>
+              "
+                >
+                  <div className="text-4xl font-semibold">৳ 91,000</div>
+                  <button className="bg-gray-700 text-white font-medium p-2 px-4 rounded-lg">
+                    View Details
+                  </button>
+                </div>
               </div>
             </div>
           </div>
