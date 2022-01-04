@@ -6,10 +6,11 @@
 - showiung weather data
 - [x] Bring the design in one place
 - [x] Showing the city name in capiatl letter
+- [x] Able to Fetch data from local json file in ReactJS
+- [x] Able to show json data in page
 - [ ] Use of Frmaer Motipon to bounce weather icons
 - [ ] Search Fligth btton needs to be moveable once clicked
 - [ ] Must replace bus icon wqith plane icon
-- [x] Able to Fetch data from local json file in ReactJS
 
 ## Npm pakages needed
 
@@ -27,7 +28,9 @@
       });
       }"
       [Source](https://stackoverflow.com/questions/41278385/setstate-doesnt-update-the-state-immediately)
+- [x] Json fil data recieved but not able to show the data using ".map()". Sol: Used '{}' instead of '()' after '=>'
 - [ ] When I type, the heading also changes with it.
+- [ ] when I hit search button twice, it gives an error. Probably due to "Dhaka" and not "dhaka"
 
 ## What I learned
 
