@@ -58,16 +58,20 @@ export default function ReactView() {
           />
         </svg>
       </nav>
-      {/* bg-[url('img/agadir.jpg')] bg-cover bg-center */}
+
       <div
         className='
         hero
         flex flex-col
         justify-between
         h-[645px]
-        bg-gray-800
         p-10
       '
+        style={{
+          backgroundImage: "url(/img/agadir.jpg)",
+          backgroundPosition: "center",
+          backgroundSize: "cover",
+        }}
       >
         <div className='badge flex justify-end text-white'>
           <div

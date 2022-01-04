@@ -28,10 +28,8 @@
 - [x] price arrow button should increase size when hover
 - [x] Search Flight button needs to be moveable once clicked
 - [x] Plane icon added
+- [x] Hero image added
 - [ ] Show search and date with modal
-
-- [ ] Must replace bus icon wqith plane icon
-- [ ] do something about the hero image
 - [ ] Use of Framer Motion to bounce weather icons
 
 ## Tiny tasks
