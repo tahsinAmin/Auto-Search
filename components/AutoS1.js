@@ -4,34 +4,58 @@ import data from "./data/flights.json";
 
 export default class AutoS1 extends React.Component {
   state = {
-    todo: "",
-    todoArr: [],
+    cityName: "",
+    tempDay: [],
     weatherFound: false,
     countryName: "",
+    allFlights: [],
+    flightsFound: false,
   };
   render() {
+    const {
+      cityName,
+      weatherFound,
+      tempDay,
+      countryName,
+      flightsFound,
+      allFlights,
+    } = this.state;
     const addItem = async () => {
-      // var jsonRead = JSON.parse(data);
-      console.log(
-        "Hello " +
-          data[0].bangladesh["2022-01-10"].dhaka.vancouvar[0].flight_name
-      );
       await axios
         .get(
-          `https://api.sharetrip.net/api/v1/flight/search/airport?name=${todo}`
+          `https://api.sharetrip.net/api/v1/flight/search/airport?name=${cityName}`
         )
         .then((res) => {
           const result1 = res.data.response[0].name.split(",")[0];
-          this.setState({
-            countryName: result1,
-            todo: res.data.response[0].city,
-          });
-          console.log(countryName);
+          this.setState(
+            { countryName: result1, cityName: res.data.response[0].city },
+            function () {
+              this.setState(
+                {
+                  allFlights:
+                    data[0][this.state.countryName]["2022-01-10"][cityName]
+                      .vancouvar,
+                  flightsFound: true,
+                },
+                function () {
+                  console.log(
+                    cityName,
+                    this.state.countryName,
+                    this.state.flightsFound
+                  );
+                  console.log(
+                    data[0][this.state.countryName]["2022-01-10"][cityName]
+                      .vancouvar[0].duration
+                  );
+                }
+              );
+            }
+          );
         });
 
       await axios
         .get(
-          `https://api.weatherapi.com/v1/history.json?key=e6a73467a3e94aa184c122435212812&q=canada&q=${todo}&dt=2021.12.30&aqi=yes`
+          `https://api.weatherapi.com/v1/history.json?key=e6a73467a3e94aa184c122435212812&q=canada&q=${cityName}&dt=2021.12.30&aqi=yes`
         )
         .then((res) => {
           const hour = res.data.forecast.forecastday[0].hour;
@@ -77,18 +101,18 @@ export default class AutoS1 extends React.Component {
           ).toFixed(1);
           const list2 = [];
           list2.push(morning, afternoon, evening, overnight);
-          console.log(list2);
-          this.setState({ todoArr: list2, weatherFound: true });
+          // console.log(list2);
+          this.setState({ tempDay: list2, weatherFound: true });
         });
     };
-    const { todo, weatherFound, todoArr, countryName } = this.state;
+
     return (
       <div>
         <input
           type='text'
-          value={this.state.todo}
-          onChange={(e) => this.setState({ todo: e.target.value })}
-          placeholder='Todo...'
+          value={cityName}
+          onChange={(e) => this.setState({ cityName: e.target.value })}
+          placeholder='cityName...'
           className='border-2 border-gray-600 p-2 rounded-md'
         />
         <button onClick={addItem}>Add Item</button>
@@ -96,7 +120,7 @@ export default class AutoS1 extends React.Component {
         {weatherFound && (
           <section className='weather'>
             <h1 className='text-3xl font-bold'>
-              Weather forecast today in {todo}, {countryName}
+              Weather forecast today in {cityName}, {countryName}
             </h1>
             <div
               className='
@@ -141,7 +165,7 @@ export default class AutoS1 extends React.Component {
                   <div className='text-2xl font-semibold'>Morning</div>
                 </div>
                 <div className='temp text-[100px] font-light'>
-                  {todoArr[0]}°
+                  {tempDay[0]}°
                 </div>
               </div>
               <div
@@ -176,7 +200,7 @@ export default class AutoS1 extends React.Component {
                   <div className='text-2xl font-semibold'>Afternoon</div>
                 </div>
                 <div className='temp text-[100px] font-light'>
-                  {todoArr[1]}°
+                  {tempDay[1]}°
                 </div>
               </div>
               <div
@@ -211,7 +235,7 @@ export default class AutoS1 extends React.Component {
                   <div className='text-2xl font-semibold'>Evening</div>
                 </div>
                 <div className='temp text-[100px] font-light'>
-                  {todoArr[2]}°
+                  {tempDay[2]}°
                 </div>
               </div>
               <div
@@ -246,12 +270,19 @@ export default class AutoS1 extends React.Component {
                   <div className='text-2xl font-semibold'>Overnight</div>
                 </div>
                 <div className='temp text-[100px] font-light'>
-                  {todoArr[3]}°
+                  {tempDay[3]}°
                 </div>
               </div>
             </div>
           </section>
         )}
+
+        <section>
+          {flightsFound &&
+            allFlights.map((f) => {
+              <p>{f["duration"]}</p>;
+            })}
+        </section>
       </div>
     );
   }

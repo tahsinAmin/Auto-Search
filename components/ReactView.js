@@ -174,10 +174,10 @@ export default function ReactView() {
         </div>
       </div>
       <main className='container max-w-7xl mx-auto mt-10'>
-        {/* <section className="weather">
-          <h1 className="text-3xl font-bold">Select departing flights</h1>
-          <div className="flex space-x-8 mt-4 items-center">
-            <div className="flex space-x-4">
+        <section className='weather'>
+          <h1 className='text-3xl font-bold'>Select departing flights</h1>
+          <div className='flex space-x-8 mt-4 items-center'>
+            <div className='flex space-x-4'>
               <FaPlaneDeparture />
               <h2>
                 <b>Hong Kong</b> to <b>Las Vegas</b>
@@ -188,7 +188,7 @@ export default function ReactView() {
             </span>
           </div>
           <div
-            className="
+            className='
             display-weather
             
             rounded-lg
@@ -197,10 +197,10 @@ export default function ReactView() {
             gap-4
             p-4
             drop-shadow-xl
-          "
+          '
           >
             <div
-              className="
+              className='
               rounded-lg
               flex
               justify-between
@@ -209,31 +209,31 @@ export default function ReactView() {
               p-auto
               items-center
               space-x-1
-            "
+            '
             >
-              <div className="icon-text flex flex-col items-center">
-                <div className="icon">
+              <div className='icon-text flex flex-col items-center'>
+                <div className='icon'>
                   <svg
-                    className="w-6 h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
+                    className='w-6 h-6'
+                    fill='none'
+                    stroke='currentColor'
+                    viewBox='0 0 24 24'
+                    xmlns='http://www.w3.org/2000/svg'
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      stroke-width='2'
+                      d='M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z'
                     ></path>
                   </svg>
                 </div>
-                <div className="text-2xl font-semibold">Morning</div>
+                <div className='text-2xl font-semibold'>Morning</div>
               </div>
-              <div className="temp text-[100px] font-light">14°</div>
+              <div className='temp text-[100px] font-light'>14°</div>
             </div>
             <div
-              className="
+              className='
               rounded-lg
               flex
               justify-between
@@ -242,31 +242,18 @@ export default function ReactView() {
               p-auto
               items-center
               space-x-1
-            "
+            '
             >
-              <div className="icon-text flex flex-col items-center">
-                <div className="icon">
-                  <svg
-                    className="w-6 h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z"
-                    ></path>
-                  </svg>
+              <div className='icon-text flex flex-col items-center'>
+                <div className='icon'>
+                  <img src='/svg/cloud.svg' alt='' />
                 </div>
-                <div className="text-2xl font-semibold">Afternoon</div>
+                <div className='text-2xl font-semibold'>Afternoon</div>
               </div>
-              <div className="temp text-[100px] font-light">4°</div>
+              <div className='temp text-[100px] font-light'>4°</div>
             </div>
             <div
-              className="
+              className='
               rounded-lg
               flex
               justify-between
@@ -275,31 +262,20 @@ export default function ReactView() {
               p-auto
               items-center
               space-x-1
-            "
+            '
             >
-              <div className="icon-text flex flex-col items-center">
-                <div className="icon">
-                  <svg
-                    className="w-6 h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z"
-                    ></path>
-                  </svg>
+              <div className='icon-text flex flex-col items-center'>
+                <div className='icon'>
+                  <div className='icon'>
+                    <img src='/svg/cloud-drizzle.svg' alt='' />
+                  </div>
                 </div>
-                <div className="text-2xl font-semibold">Evening</div>
+                <div className='text-2xl font-semibold'>Evening</div>
               </div>
-              <div className="temp text-[100px] font-light">27°</div>
+              <div className='temp text-[100px] font-light'>27°</div>
             </div>
             <div
-              className="
+              className='
               rounded-lg
               flex
               justify-between
@@ -308,31 +284,31 @@ export default function ReactView() {
               p-auto
               items-center
               space-x-1
-            "
+            '
             >
-              <div className="icon-text flex flex-col items-center">
-                <div className="icon">
+              <div className='icon-text flex flex-col items-center'>
+                <div className='icon'>
                   <svg
-                    className="w-6 h-6"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
+                    className='w-6 h-6'
+                    fill='none'
+                    stroke='currentColor'
+                    viewBox='0 0 24 24'
+                    xmlns='http://www.w3.org/2000/svg'
                   >
                     <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      stroke-width="2"
-                      d="M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z"
+                      stroke-linecap='round'
+                      stroke-linejoin='round'
+                      stroke-width='2'
+                      d='M20.354 15.354A9 9 0 018.646 3.646 9.003 9.003 0 0012 21a9.003 9.003 0 008.354-5.646z'
                     ></path>
                   </svg>
                 </div>
-                <div className="text-2xl font-semibold">Overnight</div>
+                <div className='text-2xl font-semibold'>Overnight</div>
               </div>
-              <div className="temp text-[100px] font-light">9°</div>
+              <div className='temp text-[100px] font-light'>9°</div>
             </div>
           </div>
-        </section> */}
+        </section>
         <section className='flex flex-col space-y-4 mt-4 border-gray-200 text-lg'>
           <div className='sort-flights flex space-x-6'>
             <span className='text-gray-600'>Sort by: </span>
@@ -378,9 +354,9 @@ export default function ReactView() {
                   </div>
                 </div>
                 <div className='flight-item-info px-2.5 flex justify-between items-center'>
-                  <div className='flex flex-col items-center '>
-                    <div>00:15</div>
-                    <div>DAC</div>
+                  <div className='flex flex-col items-center text-center'>
+                    <div className='text-5xl font-regular'>00:15</div>
+                    <div className='text-3xl font-light'>DAC</div>
                   </div>
                   <div>
                     <img
