@@ -2,7 +2,7 @@
 // import AutoSearch from "../components/AutoSearch";
 // import PersonList from "../components/PersonList";
 // import AutoClass from "../components/AutoClass";
-// import ReactView from "../components/ReactView";
+import ReactView from "../components/ReactView";
 import AutoS1 from "../components/AutoS1";
 
 export default function Home() {
@@ -11,8 +11,8 @@ export default function Home() {
       {/* <AutoSearch /> */}
       {/* <PersonList /> */}
       {/* <AutoClass /> */}
-      {/* <ReactView /> */}
-      <AutoS1 />
+      <ReactView />
+      {/* <AutoS1 /> */}
     </div>
   );
 }

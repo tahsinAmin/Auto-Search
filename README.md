@@ -11,10 +11,13 @@
 - [ ] Use of Frmaer Motipon to bounce weather icons
 - [ ] Search Fligth button needs to be moveable once clicked
 - [ ] Must replace bus icon wqith plane icon
+- [ ] show a message if no flights found
 
 ## Tiny tasks
 
 - [ ] Remove countreyName variable if not needed
+- [ ] Better fonts needed
+- [ ] bus icon needs to be removed
 
 ## Npm pakages needed
 

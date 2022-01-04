@@ -4,7 +4,6 @@ import { FaPlaneDeparture, FaWarehouse } from "react-icons/fa";
 
 export default function ReactView() {
   return (
-    // <div className="bg-gray-800">
     <div className="">
       {/* <nav className="bg-blue-900 text-white flex justify-between items-center px-4 py-4">
         <div className="logo">
@@ -17,7 +16,7 @@ export default function ReactView() {
             height="26"
           />
         </div>
-        
+
         <div className="others sm:block flex space-x-4">
           <a href="" className="tracking-wider font-regular text-lg">
             Rentals
@@ -59,7 +58,7 @@ export default function ReactView() {
           />
         </svg>
       </nav> */}
-      <div
+      {/* <div
         className="
         hero
         flex flex-col
@@ -67,7 +66,7 @@ export default function ReactView() {
         mx-4
         sm:mx-0
         h-[645px]
-        bg-[url('/img/agadir.jpg')] bg-cover bg-center
+        bg-[url('img/agadir.jpg')] bg-cover bg-center
         p-10
       "
       >
@@ -172,9 +171,9 @@ export default function ReactView() {
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
       <main className="container max-w-7xl mx-auto mt-10">
-        <section className="weather">
+        {/* <section className="weather">
           <h1 className="text-xl font-bold">Select departing flights</h1>
           <div className="flex space-x-8 mt-4 items-center">
             <div className="flex space-x-4">
@@ -308,8 +307,8 @@ export default function ReactView() {
               <div className="temp text-[100px] font-light">9°</div>
             </div>
           </div>
-        </section>
-        <section className="flex ">
+        </section> */}
+        <section className="filter-flights flex">
           <div className="filter w-4/12 mt-4 flex items-start space-x-2 border-r-2 mr-4">
             <svg
               class="w-6 h-6"
@@ -339,14 +338,18 @@ export default function ReactView() {
               </div>
             </div>
             <div className="flights-found">5 flights found</div>
-            <div className="flight-lists flex flex-col space-y-2">
+            <div className="flight-lists flex flex-col space-y-2 pl-4 pr-5 drop-shadow-md">
               <div
                 className="
-              flight-list-item
+              flight-list-item cursor-pointer hover:scale-105
+              transform
+              transition
+              duration-300
+              ease-out
               flex
               justify-between
               bg-gray-400
-              mb-10
+              
               border-2
               rounded-xl
               p-3
@@ -371,7 +374,153 @@ export default function ReactView() {
                       </span>
                     </div>
                   </div>
-                  <div className="flight-item-info px-2.5 flex justify-between items-center">
+                  <div className="flight-item-info pl-5 flex justify-between items-center">
+                    <div className="flex flex-col items-center text-center">
+                      <div className="text-5xl font-regular">00:15</div>
+                      <div className="text-3xl font-light">DAC</div>
+                    </div>
+                    <div>
+                      <img
+                        className="max-w-full nav-row-logo"
+                        loading="lazy"
+                        src="/img/car-direction.png"
+                        alt="rentByOwner"
+                        width="182"
+                        height="26"
+                      />
+                    </div>
+                    <div className="flex flex-col items-center text-center">
+                      <div className="text-5xl font-regular">00:50</div>
+                      <div className="text-3xl font-light">VAN</div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="
+                flex flex-col
+                items-center
+                space-y-4
+                border-l-2
+                px-4
+                justify-center
+                py-2
+              "
+                >
+                  <div className="text-4xl font-semibold">৳ 91,000</div>
+                  <button className="bg-gray-700 text-white font-medium p-2 px-4 rounded-lg">
+                    View Details
+                  </button>
+                </div>
+              </div>
+              <div
+                className="
+              flight-list-item cursor-pointer hover:scale-105
+              transform
+              transition
+              duration-300
+              ease-out
+              flex
+              justify-between
+              bg-gray-400
+              
+              border-2
+              rounded-xl
+              p-3
+            "
+              >
+                <div className="flex flex-col space-y-2">
+                  <div className="badge flex justify-left text-white">
+                    <div
+                      className="badge
+                    flex space-x-4 items-center
+                    bg-gray-800
+                    text-white text-xs
+                    font-light
+                    py-1.5
+                    px-3
+                    rounded-full
+                  "
+                    >
+                      <FaWarehouse className="h-3 w-3" />
+                      <span className="font-medium rounded">
+                        Hazrat Shahjalal International Airport (DAC)
+                      </span>
+                    </div>
+                  </div>
+                  <div className="flight-item-info pl-5 flex justify-between items-center">
+                    <div className="flex flex-col items-center text-center">
+                      <div className="text-5xl font-regular">00:15</div>
+                      <div className="text-3xl font-light">DAC</div>
+                    </div>
+                    <div>
+                      <img
+                        className="max-w-full nav-row-logo"
+                        loading="lazy"
+                        src="/img/car-direction.png"
+                        alt="rentByOwner"
+                        width="182"
+                        height="26"
+                      />
+                    </div>
+                    <div className="flex flex-col items-center text-center">
+                      <div className="text-5xl font-regular">00:50</div>
+                      <div className="text-3xl font-light">VAN</div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="
+                flex flex-col
+                items-center
+                space-y-4
+                border-l-2
+                px-4
+                justify-center
+                py-2
+              "
+                >
+                  <div className="text-4xl font-semibold">৳ 91,000</div>
+                  <button className="bg-gray-700 text-white font-medium p-2 px-4 rounded-lg">
+                    View Details
+                  </button>
+                </div>
+              </div>
+              <div
+                className="
+              flight-list-item cursor-pointer hover:scale-105
+              transform
+              transition
+              duration-300
+              ease-out
+              flex
+              justify-between
+              bg-gray-400
+            
+              border-2
+              rounded-xl
+              p-3
+            "
+              >
+                <div className="flex flex-col space-y-2">
+                  <div className="badge flex justify-left text-white">
+                    <div
+                      className="badge
+                    flex space-x-4 items-center
+                    bg-gray-800
+                    text-white text-xs
+                    font-light
+                    py-1.5
+                    px-3
+                    rounded-full
+                  "
+                    >
+                      <FaWarehouse className="h-3 w-3" />
+                      <span className="font-medium rounded">
+                        Hazrat Shahjalal International Airport (DAC)
+                      </span>
+                    </div>
+                  </div>
+                  <div className="flight-item-info pl-5 flex justify-between items-center">
                     <div className="flex flex-col items-center text-center">
                       <div className="text-5xl font-regular">00:15</div>
                       <div className="text-3xl font-light">DAC</div>
