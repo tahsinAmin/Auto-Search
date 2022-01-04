@@ -8,16 +8,17 @@
 - [x] Showing the city name in capiatl letter
 - [x] Able to Fetch data from local json file in ReactJS
 - [x] Able to show json data in page
-- [ ] Use of Frmaer Motipon to bounce weather icons
+- [ ] Use of Framer Motion to bounce weather icons
 - [ ] Search Fligth button needs to be moveable once clicked
 - [ ] Must replace bus icon wqith plane icon
 - [ ] show a message if no flights found
 
 ## Tiny tasks
 
-- [ ] Remove countreyName variable if not needed
+- [ ] Remove countryName variable if not needed
 - [ ] Better fonts needed
 - [ ] bus icon needs to be removed
+- [ ] Is there a way to figure out if any of my npm packages is unused or installed by mistake?
 
 ## Npm pakages needed
 
@@ -36,12 +37,19 @@
       }"
       [Source](https://stackoverflow.com/questions/41278385/setstate-doesnt-update-the-state-immediately)
 - [x] Json fil data recieved but not able to show the data using ".map()". Sol: Used '{}' instead of '()' after '=>'
+- [x] npm packages usually encourages to import the css styles and theme in src/App.css file. However, NextJs do not come with that. Sol: Put the imports in tyhe same component where the npm 8is being used.
 - [ ] When I type, the heading also changes with it.
 - [ ] when I hit search button twice, it gives an error. Probably due to "Dhaka" and not "dhaka"
 - [ ] how to remove defualt date icon from date-input
+- [ ] How to convert my class based compoent to functional component?
 
 ## What I learned
 
 - How to write a callback function
 - How to write a class component
 - How to read local json file in ReactJS
+- Adding fonts in ReactJS
+
+## For Refactor
+
+- [ ] getStatic Component if needed

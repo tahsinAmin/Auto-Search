@@ -33,7 +33,7 @@ export default function ReactView() {
             bg-[#00CD92]
             py-2
             px-3
-            rounded-xl
+            rounded-lg
             font-regular
             text-white text-lg
           "
@@ -309,58 +309,96 @@ export default function ReactView() {
           </div>
         </section> */}
         <section className="filter-flights flex">
-          <div className="filter w-4/12 mt-4 flex items-start space-x-2 border-r-2 mr-4">
-            <svg
-              class="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"
-              ></path>
-            </svg>
-            <h2 className="text-2xl font-medium">Filter by:</h2>
+          <div className="filter w-4/12 mt-4  border-r-2 mr-4 sticky top-0">
+            <div className="flex items-center space-x-2">
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"
+                ></path>
+              </svg>
+              <h2 className="text-2xl font-medium">Filter by:</h2>
+            </div>
+            <div className="mt-6 text-lg">
+              <h3 className="font-medium">Airports</h3>
+              <div className="flex space-x-2 items-center mt-2">
+                <input type="checkbox" id="scales" name="scales" />{" "}
+                <span>Hazrat Shahjalal International Airport (DAC)</span>
+              </div>
+              <div className="flex space-x-2 items-center mt-2">
+                <input type="checkbox" id="scales" name="scales" />{" "}
+                <span>Hazrat Shahjalal International Airport (DAC)</span>
+              </div>
+              <div className="flex space-x-2 items-center mt-2">
+                <input type="checkbox" id="scales" name="scales" />{" "}
+                <span>Hazrat Shahjalal International Airport (DAC)</span>
+              </div>
+              <div className="flex space-x-2 items-center mt-2">
+                <input type="checkbox" id="scales" name="scales" />{" "}
+                <span>Hazrat Shahjalal International Airport (DAC)</span>
+              </div>
+            </div>
+            <div className="mt-6 text-lg">
+              <h3 className="font-medium">Airlines</h3>
+              <div className="flex space-x-2 items-center mt-2">
+                <input type="checkbox" id="scales" name="scales" />{" "}
+                <span>Bangladesh Biman</span>
+              </div>
+              <div className="flex space-x-2 items-center mt-2">
+                <input type="checkbox" id="scales" name="scales" />{" "}
+                <span>Qatar Airways</span>
+              </div>
+              <div className="flex space-x-2 items-center mt-2">
+                <input type="checkbox" id="scales" name="scales" />{" "}
+                <span>Kuwait Airways</span>
+              </div>
+              <div className="flex space-x-2 items-center mt-2">
+                <input type="checkbox" id="scales" name="scales" />{" "}
+                <span>Emirates</span>
+              </div>
+            </div>
           </div>
           <div className="all-flights w-8/12 flex flex-col space-y-4 mt-4 border-gray-200 text-lg">
             <div className="sort-flights flex space-x-6">
               <span className="text-gray-600">Sort by: </span>
               <div className="flex space-x-10 text-blue-600">
                 <span className="underline active text-gray-700 font-semibold">
-                  Recommended
+                  Pricing
                 </span>
                 <span>Duration</span>
                 <span>Cheapest</span>
               </div>
             </div>
             <div className="flights-found">5 flights found</div>
-            <div className="flight-lists flex flex-col space-y-2 pl-4 pr-5 drop-shadow-md">
+            <div className="flight-lists flex flex-col pl-4 pr-5 drop-shadow-xl">
               <div
                 className="
-              flight-list-item cursor-pointer hover:scale-105
+              flight-list-item cursor-pointer hover:scale-[102%]
               transform
               transition
               duration-300
               ease-out
               flex
               justify-between
-              bg-gray-400
-              
-              border-2
-              rounded-xl
+              bg-gray-100
+              rounded-lg
               p-3
             "
               >
-                <div className="flex flex-col space-y-2">
+                <div className="flex flex-col space-y-5">
                   <div className="badge flex justify-left text-white">
                     <div
                       className="badge
                     flex space-x-4 items-center
-                    bg-gray-800
+                    bg-gray-700
                     text-white text-xs
                     font-light
                     py-1.5
@@ -369,7 +407,10 @@ export default function ReactView() {
                   "
                     >
                       <FaWarehouse className="h-3 w-3" />
-                      <span className="font-medium rounded">
+                      <span
+                        className="font-bold text-gray-100 text-sm rounded"
+                        style={{ fontFamily: "Montserrat" }}
+                      >
                         Hazrat Shahjalal International Airport (DAC)
                       </span>
                     </div>
@@ -406,34 +447,37 @@ export default function ReactView() {
                 py-2
               "
                 >
-                  <div className="text-4xl font-semibold">৳ 91,000</div>
-                  <button className="bg-gray-700 text-white font-medium p-2 px-4 rounded-lg">
+                  <div className="text-4xl font-semibold">
+                    $<span style={{ fontFamily: "Catamaran" }}>910</span>
+                  </div>
+                  <button
+                    className="bg-gray-700 text-white font-semibold p-2 px-4 rounded-lg"
+                    style={{ fontFamily: "Montserrat" }}
+                  >
                     View Details
                   </button>
                 </div>
               </div>
               <div
                 className="
-              flight-list-item cursor-pointer hover:scale-105
+              flight-list-item cursor-pointer hover:scale-[102%]
               transform
               transition
               duration-300
               ease-out
               flex
               justify-between
-              bg-gray-400
-              
-              border-2
-              rounded-xl
+              bg-gray-100
+              rounded-lg
               p-3
             "
               >
-                <div className="flex flex-col space-y-2">
+                <div className="flex flex-col space-y-5">
                   <div className="badge flex justify-left text-white">
                     <div
                       className="badge
                     flex space-x-4 items-center
-                    bg-gray-800
+                    bg-gray-700
                     text-white text-xs
                     font-light
                     py-1.5
@@ -442,7 +486,10 @@ export default function ReactView() {
                   "
                     >
                       <FaWarehouse className="h-3 w-3" />
-                      <span className="font-medium rounded">
+                      <span
+                        className="font-bold text-gray-100 text-sm rounded"
+                        style={{ fontFamily: "Montserrat" }}
+                      >
                         Hazrat Shahjalal International Airport (DAC)
                       </span>
                     </div>
@@ -479,34 +526,37 @@ export default function ReactView() {
                 py-2
               "
                 >
-                  <div className="text-4xl font-semibold">৳ 91,000</div>
-                  <button className="bg-gray-700 text-white font-medium p-2 px-4 rounded-lg">
+                  <div className="text-4xl font-semibold">
+                    $<span style={{ fontFamily: "Catamaran" }}>910</span>
+                  </div>
+                  <button
+                    className="bg-gray-700 text-white font-semibold p-2 px-4 rounded-lg"
+                    style={{ fontFamily: "Montserrat" }}
+                  >
                     View Details
                   </button>
                 </div>
               </div>
               <div
                 className="
-              flight-list-item cursor-pointer hover:scale-105
+              flight-list-item cursor-pointer hover:scale-[102%]
               transform
               transition
               duration-300
               ease-out
               flex
               justify-between
-              bg-gray-400
-            
-              border-2
-              rounded-xl
+              bg-gray-100
+              rounded-lg
               p-3
             "
               >
-                <div className="flex flex-col space-y-2">
+                <div className="flex flex-col space-y-5">
                   <div className="badge flex justify-left text-white">
                     <div
                       className="badge
                     flex space-x-4 items-center
-                    bg-gray-800
+                    bg-gray-700
                     text-white text-xs
                     font-light
                     py-1.5
@@ -515,7 +565,10 @@ export default function ReactView() {
                   "
                     >
                       <FaWarehouse className="h-3 w-3" />
-                      <span className="font-medium rounded">
+                      <span
+                        className="font-bold text-gray-100 text-sm rounded"
+                        style={{ fontFamily: "Montserrat" }}
+                      >
                         Hazrat Shahjalal International Airport (DAC)
                       </span>
                     </div>
@@ -552,8 +605,329 @@ export default function ReactView() {
                 py-2
               "
                 >
-                  <div className="text-4xl font-semibold">৳ 91,000</div>
-                  <button className="bg-gray-700 text-white font-medium p-2 px-4 rounded-lg">
+                  <div className="text-4xl font-semibold">
+                    $<span style={{ fontFamily: "Catamaran" }}>910</span>
+                  </div>
+                  <button
+                    className="bg-gray-700 text-white font-semibold p-2 px-4 rounded-lg"
+                    style={{ fontFamily: "Montserrat" }}
+                  >
+                    View Details
+                  </button>
+                </div>
+              </div>
+              <div
+                className="
+              flight-list-item cursor-pointer hover:scale-[102%]
+              transform
+              transition
+              duration-300
+              ease-out
+              flex
+              justify-between
+              bg-gray-100
+              rounded-lg
+              p-3
+            "
+              >
+                <div className="flex flex-col space-y-5">
+                  <div className="badge flex justify-left text-white">
+                    <div
+                      className="badge
+                    flex space-x-4 items-center
+                    bg-gray-700
+                    text-white text-xs
+                    font-light
+                    py-1.5
+                    px-3
+                    rounded-full
+                  "
+                    >
+                      <FaWarehouse className="h-3 w-3" />
+                      <span
+                        className="font-bold text-gray-100 text-sm rounded"
+                        style={{ fontFamily: "Montserrat" }}
+                      >
+                        Hazrat Shahjalal International Airport (DAC)
+                      </span>
+                    </div>
+                  </div>
+                  <div className="flight-item-info pl-5 flex justify-between items-center">
+                    <div className="flex flex-col items-center text-center">
+                      <div className="text-5xl font-regular">00:15</div>
+                      <div className="text-3xl font-light">DAC</div>
+                    </div>
+                    <div>
+                      <img
+                        className="max-w-full nav-row-logo"
+                        loading="lazy"
+                        src="/img/car-direction.png"
+                        alt="rentByOwner"
+                        width="182"
+                        height="26"
+                      />
+                    </div>
+                    <div className="flex flex-col items-center text-center">
+                      <div className="text-5xl font-regular">00:50</div>
+                      <div className="text-3xl font-light">VAN</div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="
+                flex flex-col
+                items-center
+                space-y-4
+                border-l-2
+                px-4
+                justify-center
+                py-2
+              "
+                >
+                  <div className="text-4xl font-semibold">
+                    $<span style={{ fontFamily: "Catamaran" }}>910</span>
+                  </div>
+                  <button
+                    className="bg-gray-700 text-white font-semibold p-2 px-4 rounded-lg"
+                    style={{ fontFamily: "Montserrat" }}
+                  >
+                    View Details
+                  </button>
+                </div>
+              </div>
+              <div
+                className="
+              flight-list-item cursor-pointer hover:scale-[102%]
+              transform
+              transition
+              duration-300
+              ease-out
+              flex
+              justify-between
+              bg-gray-100
+              rounded-lg
+              p-3
+            "
+              >
+                <div className="flex flex-col space-y-5">
+                  <div className="badge flex justify-left text-white">
+                    <div
+                      className="badge
+                    flex space-x-4 items-center
+                    bg-gray-700
+                    text-white text-xs
+                    font-light
+                    py-1.5
+                    px-3
+                    rounded-full
+                  "
+                    >
+                      <FaWarehouse className="h-3 w-3" />
+                      <span
+                        className="font-bold text-gray-100 text-sm rounded"
+                        style={{ fontFamily: "Montserrat" }}
+                      >
+                        Hazrat Shahjalal International Airport (DAC)
+                      </span>
+                    </div>
+                  </div>
+                  <div className="flight-item-info pl-5 flex justify-between items-center">
+                    <div className="flex flex-col items-center text-center">
+                      <div className="text-5xl font-regular">00:15</div>
+                      <div className="text-3xl font-light">DAC</div>
+                    </div>
+                    <div>
+                      <img
+                        className="max-w-full nav-row-logo"
+                        loading="lazy"
+                        src="/img/car-direction.png"
+                        alt="rentByOwner"
+                        width="182"
+                        height="26"
+                      />
+                    </div>
+                    <div className="flex flex-col items-center text-center">
+                      <div className="text-5xl font-regular">00:50</div>
+                      <div className="text-3xl font-light">VAN</div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="
+                flex flex-col
+                items-center
+                space-y-4
+                border-l-2
+                px-4
+                justify-center
+                py-2
+              "
+                >
+                  <div className="text-4xl font-semibold">
+                    $<span style={{ fontFamily: "Catamaran" }}>910</span>
+                  </div>
+                  <button
+                    className="bg-gray-700 text-white font-semibold p-2 px-4 rounded-lg"
+                    style={{ fontFamily: "Montserrat" }}
+                  >
+                    View Details
+                  </button>
+                </div>
+              </div>
+              <div
+                className="
+              flight-list-item cursor-pointer hover:scale-[102%]
+              transform
+              transition
+              duration-300
+              ease-out
+              flex
+              justify-between
+              bg-gray-100
+              rounded-lg
+              p-3
+            "
+              >
+                <div className="flex flex-col space-y-5">
+                  <div className="badge flex justify-left text-white">
+                    <div
+                      className="badge
+                    flex space-x-4 items-center
+                    bg-gray-700
+                    text-white text-xs
+                    font-light
+                    py-1.5
+                    px-3
+                    rounded-full
+                  "
+                    >
+                      <FaWarehouse className="h-3 w-3" />
+                      <span
+                        className="font-bold text-gray-100 text-sm rounded"
+                        style={{ fontFamily: "Montserrat" }}
+                      >
+                        Hazrat Shahjalal International Airport (DAC)
+                      </span>
+                    </div>
+                  </div>
+                  <div className="flight-item-info pl-5 flex justify-between items-center">
+                    <div className="flex flex-col items-center text-center">
+                      <div className="text-5xl font-regular">00:15</div>
+                      <div className="text-3xl font-light">DAC</div>
+                    </div>
+                    <div>
+                      <img
+                        className="max-w-full nav-row-logo"
+                        loading="lazy"
+                        src="/img/car-direction.png"
+                        alt="rentByOwner"
+                        width="182"
+                        height="26"
+                      />
+                    </div>
+                    <div className="flex flex-col items-center text-center">
+                      <div className="text-5xl font-regular">00:50</div>
+                      <div className="text-3xl font-light">VAN</div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="
+                flex flex-col
+                items-center
+                space-y-4
+                border-l-2
+                px-4
+                justify-center
+                py-2
+              "
+                >
+                  <div className="text-4xl font-semibold">
+                    $<span style={{ fontFamily: "Catamaran" }}>910</span>
+                  </div>
+                  <button
+                    className="bg-gray-700 text-white font-semibold p-2 px-4 rounded-lg"
+                    style={{ fontFamily: "Montserrat" }}
+                  >
+                    View Details
+                  </button>
+                </div>
+              </div>
+              <div
+                className="
+              flight-list-item cursor-pointer hover:scale-[102%]
+              transform
+              transition
+              duration-300
+              ease-out
+              flex
+              justify-between
+              bg-gray-100
+              rounded-lg
+              p-3
+            "
+              >
+                <div className="flex flex-col space-y-5">
+                  <div className="badge flex justify-left text-white">
+                    <div
+                      className="badge
+                    flex space-x-4 items-center
+                    bg-gray-700
+                    text-white text-xs
+                    font-light
+                    py-1.5
+                    px-3
+                    rounded-full
+                  "
+                    >
+                      <FaWarehouse className="h-3 w-3" />
+                      <span
+                        className="font-bold text-gray-100 text-sm rounded"
+                        style={{ fontFamily: "Montserrat" }}
+                      >
+                        Hazrat Shahjalal International Airport (DAC)
+                      </span>
+                    </div>
+                  </div>
+                  <div className="flight-item-info pl-5 flex justify-between items-center">
+                    <div className="flex flex-col items-center text-center">
+                      <div className="text-5xl font-regular">00:15</div>
+                      <div className="text-3xl font-light">DAC</div>
+                    </div>
+                    <div>
+                      <img
+                        className="max-w-full nav-row-logo"
+                        loading="lazy"
+                        src="/img/car-direction.png"
+                        alt="rentByOwner"
+                        width="182"
+                        height="26"
+                      />
+                    </div>
+                    <div className="flex flex-col items-center text-center">
+                      <div className="text-5xl font-regular">00:50</div>
+                      <div className="text-3xl font-light">VAN</div>
+                    </div>
+                  </div>
+                </div>
+                <div
+                  className="
+                flex flex-col
+                items-center
+                space-y-4
+                border-l-2
+                px-4
+                justify-center
+                py-2
+              "
+                >
+                  <div className="text-4xl font-semibold">
+                    $<span style={{ fontFamily: "Catamaran" }}>910</span>
+                  </div>
+                  <button
+                    className="bg-gray-700 text-white font-semibold p-2 px-4 rounded-lg"
+                    style={{ fontFamily: "Montserrat" }}
+                  >
                     View Details
                   </button>
                 </div>
