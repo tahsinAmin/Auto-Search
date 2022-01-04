@@ -6,24 +6,24 @@ function AutoSearch() {
   const [weatherForecast, setWeatherForecast] = useState([]);
   const [text, setText] = useState("");
   const [suggestions, setSuggestions] = useState([]);
-  useEffect(() => {
-    const loadUsers = async () => {
-      // const response = await axios.get("https://reqres.in/api/users");
-      const response = await axios.get(
-        "https://api.sharetrip.net/api/v1/flight/search/airport?name=Vancouver"
-      );
 
-      setUsers(response.data.response);
-      console.log(response.data.response);
-    };
-    loadUsers();
-  }, []);
+  const loadCities = async (text) => {
+    // const response = await axios.get("https://reqres.in/api/users");
+    const response = await axios.get(
+      `https://api.sharetrip.net/api/v1/flight/search/airport?name=${text}`
+    );
+
+    setUsers(response.data.response);
+    console.log(response.data.response);
+  };
+
   const onSuggestHandler = (selectedItem) => {
     setText(selectedItem);
     setSuggestions([]);
   };
   const onChangeHandler = (text) => {
     let matches = [];
+    loadCities(text);
     if (text.length > 0) {
       matches = users.filter((usr) => {
         const regex = new RegExp(`${text}`, "gi");
