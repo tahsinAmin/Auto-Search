@@ -1,4 +1,8 @@
-## Tasks
+# TODOs
+
+- Make mobile friendly (integrate tap and swipe actions)
+- Improve README.md documentation
+- Incomplete work, need to merge all components into one to be functional
 
 ### Logic
 
@@ -10,11 +14,13 @@
 - [x] Showing the city name in capiatl letter
 - [x] Able to Fetch data from local json file in ReactJS
 - [x] Able to show json data in page
-- [ ] work with input date
+- [x] Able to show the whole location in the map
+- [x] Have 2 inputs like the above.
+- [x] Work with Handle Submit
+- [ ] Show Weather data with the given values
 
 - [ ] show a message if no flights found
 - [ ] Make the toggle work
-- [ ] Date is decreasing by 1
 
 ### UI/UX
 
@@ -52,6 +58,8 @@
       [Source](https://stackoverflow.com/questions/41278385/setstate-doesnt-update-the-state-immediately)
 - [x] Json fil data recieved but not able to show the data using ".map()". Sol: Used '{}' instead of '()' after '=>'
 - [x] npm packages usually encourages to import the css styles and theme in src/App.css file. However, NextJs do not come with that. Sol: Put the imports in tyhe same component where the npm 8is being used.
+- [x] Date is decreasing by 1 when we show in output. Sol: Use toLocaleString()
+- [x] Removing spaces at the start or end of a string. Sol: .replace(/^\s+|\s+$/g, "");
 - [ ] When I type, the heading also changes with it.
 - [ ] when I hit search button twice, it gives an error. Probably due to "Dhaka" and not "dhaka"
 - [ ] how to remove defualt date icon from date-input
