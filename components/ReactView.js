@@ -5,7 +5,7 @@ import { FaPlaneDeparture, FaWarehouse } from "react-icons/fa";
 export default function ReactView() {
   return (
     <div className="">
-      {/* <nav className="bg-blue-900 text-white flex justify-between items-center px-4 py-4">
+      <nav className="bg-blue-900 text-white flex justify-between items-center px-4 py-4">
         <div className="logo">
           <img
             className="max-w-full nav-row-logo"
@@ -57,16 +57,15 @@ export default function ReactView() {
         6h16M4 12h16M4 18h16"
           />
         </svg>
-      </nav> */}
-      {/* <div
+      </nav>
+      {/* bg-[url('img/agadir.jpg')] bg-cover bg-center */}
+      <div
         className="
         hero
         flex flex-col
         justify-between
-        mx-4
-        sm:mx-0
         h-[645px]
-        bg-[url('img/agadir.jpg')] bg-cover bg-center
+        bg-gray-800
         p-10
       "
       >
@@ -130,50 +129,41 @@ export default function ReactView() {
               <input
                 type="text"
                 placeholder="Going from?"
-                className="
-                border
-                p-1
-                border-3 border-gray-600 border-t-0 border-l-0 border-r-0
-              "
+                className="p-1 border-gray-600 border-b-2 outline-none"
               />
               <input
                 type="text"
                 placeholder="Going to?"
-                className="
-                border
-                p-1
-                border-3 border-gray-600 border-t-0 border-l-0 border-r-0
-              "
+                className="p-1 border-gray-600 border-b-2 outline-none"
               />
               <input
                 type="text"
                 placeholder="Depart date?"
-                className="
-                border
-                p-1
-                border-3 border-gray-600 border-t-0 border-l-0 border-r-0
-              "
+                className="p-1 border-gray-600 border-b-2 outline-none"
               />
               <input
                 type="text"
                 placeholder="Return Date"
-                className="
-                border
-                p-1
-                border-3 border-gray-600 border-t-0 border-l-0 border-r-0
-              "
+                className="p-1 border-gray-600 border-b-2 outline-none"
               />
             </div>
             <div>
-              <button className="bg-gray-700 text-white font-semibold p-2 rounded-lg">
+              <button
+                className="bg-gray-700 text-white font-semibold p-2 rounded-lg hover:scale-105 hover:bg-gray-900
+              transform
+              transition
+              duration-300
+              ease-out"
+                style={{ fontFamily: "Montserrat" }}
+              >
                 Search Flights
               </button>
             </div>
           </div>
         </div>
-      </div> */}
+      </div>
       <main className="container max-w-7xl mx-auto mt-10">
-        {/* <section className="weather">
+        <section className="weather">
           <h1 className="text-xl font-bold">Select departing flights</h1>
           <div className="flex space-x-8 mt-4 items-center">
             <div className="flex space-x-4">
@@ -307,8 +297,8 @@ export default function ReactView() {
               <div className="temp text-[100px] font-light">9°</div>
             </div>
           </div>
-        </section> */}
-        <section className="filter-flights flex">
+        </section>
+        <section className="filter-flights flex mb-20">
           <div className="filter w-4/12 mt-4  border-r-2 mr-4 sticky top-0">
             <div className="flex items-center space-x-2">
               <svg
@@ -367,17 +357,57 @@ export default function ReactView() {
             </div>
           </div>
           <div className="all-flights w-8/12 flex flex-col space-y-4 mt-4 border-gray-200 text-lg">
+            <div className="flights-found">5 flights found</div>
             <div className="sort-flights flex space-x-6">
               <span className="text-gray-600">Sort by: </span>
               <div className="flex space-x-10 text-blue-600">
-                <span className="underline active text-gray-700 font-semibold">
-                  Pricing
-                </span>
-                <span>Duration</span>
-                <span>Cheapest</span>
+                <div className="flex space-x-1">
+                  <span className=" active text-gray-700 font-semibold">
+                    Pricing
+                  </span>
+                  <div
+                    className="h-10 rounded-lg flex cursor-pointer hover:scale-105
+              transform
+              transition
+              duration-300
+              ease-out"
+                  >
+                    <svg
+                      class="down-price price-toggle w-7 h-7 text-gray-800 font-semibold"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M16 17l-4 4m0 0l-4-4m4 4V3"
+                      ></path>
+                    </svg>
+                    <svg
+                      class="up-price hidden price-toggle w-7 h-7 text-gray-800 font-semibold"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M8 7l4-4m0 0l4 4m-4-4v18"
+                      ></path>
+                    </svg>
+                  </div>
+                </div>
+
+                {/* <span>Duration</span>
+                <span>Cheapest</span> */}
               </div>
             </div>
-            <div className="flights-found">5 flights found</div>
+
             <div className="flight-lists flex flex-col pl-4 pr-5 drop-shadow-xl">
               <div
                 className="

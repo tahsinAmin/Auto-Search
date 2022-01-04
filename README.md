@@ -1,17 +1,31 @@
 ## Tasks
 
+### Logic
+
 - Axios in component
 - Using 2 fetches
 - showing country name
 - showiung weather data
-- [x] Bring the design in one place
+
 - [x] Showing the city name in capiatl letter
 - [x] Able to Fetch data from local json file in ReactJS
 - [x] Able to show json data in page
-- [ ] Use of Framer Motion to bounce weather icons
-- [ ] Search Fligth button needs to be moveable once clicked
-- [ ] Must replace bus icon wqith plane icon
+- [ ] work with input date
+
 - [ ] show a message if no flights found
+- [ ] Make the toggle work
+- [ ] Date is decreasing by 1
+
+### UI/UX
+
+- [x] Bring the design in one place
+- [x] price arrow button should increase size when hover
+- [x] Search Flight button needs to be moveable once clicked
+- [ ] Show search and date with modal
+
+- [ ] Must replace bus icon wqith plane icon
+- [ ] do something about the hero image
+- [ ] Use of Framer Motion to bounce weather icons
 
 ## Tiny tasks
 
@@ -42,6 +56,7 @@
 - [ ] when I hit search button twice, it gives an error. Probably due to "Dhaka" and not "dhaka"
 - [ ] how to remove defualt date icon from date-input
 - [ ] How to convert my class based compoent to functional component?
+- [ ] how to get the date as YYYY-MM-DD from IOstring => check date = date.split("-").reverse().join("-");
 
 ## What I learned
 
@@ -49,6 +64,7 @@
 - How to write a class component
 - How to read local json file in ReactJS
 - Adding fonts in ReactJS
+- Learned how to save data in the placeholder => placholder = {placeHold || "Search..."} then deconstruct it in the functional parameters
 
 ## For Refactor
 

@@ -6,6 +6,7 @@ export default class AutoS1 extends React.Component {
   state = {
     fromCity: "",
     toCity: "",
+    departDate: "",
     tempDay: [],
     weatherFound: false,
     countryName: "",
@@ -22,8 +23,7 @@ export default class AutoS1 extends React.Component {
       flightsFound,
       allFlights,
     } = this.state;
-    const addItem = () => {
-      console.log("Hello");
+    const searchFlight = () => {
       axios
         .get(
           `https://api.sharetrip.net/api/v1/flight/search/airport?name=${toCity}`
@@ -101,34 +101,39 @@ export default class AutoS1 extends React.Component {
           ).toFixed(1);
           const list2 = [];
           list2.push(morning, afternoon, evening, overnight);
-          // console.log(list2);
           this.setState({ tempDay: list2, weatherFound: true });
         });
     };
 
     return (
       <div>
-        <input
-          type="text"
-          value={fromCity}
-          onChange={(e) => this.setState({ fromCity: e.target.value })}
-          placeholder="fromCity..."
-          className="border-2 border-gray-600 p-2 rounded-md"
-        />
-        <input
-          type="text"
-          value={toCity}
-          onChange={(e) => this.setState({ toCity: e.target.value })}
-          placeholder="toCity..."
-          className="border-2 border-gray-600 p-2 rounded-md"
-        />
-        <input
-          type="date"
-          onChange={(e) => this.setState({ toDate: e.target.value })}
-          placeholder="toDate..."
-          className="border-2 border-gray-600 p-2 rounded-md"
-        />
-        <button onClick={addItem}>Search</button>
+        <form>
+          <input
+            type="text"
+            value={fromCity}
+            name="fCity"
+            onChange={(e) => this.setState({ fromCity: e.target.value })}
+            placeholder="fromCity..."
+            className="border-2 border-gray-600 p-2 rounded-md"
+          />
+          <input
+            type="text"
+            value={toCity}
+            name="toCity"
+            onChange={(e) => this.setState({ toCity: e.target.value })}
+            placeholder="toCity..."
+            className="border-2 border-gray-600 p-2 rounded-md"
+          />
+          <input
+            type="date"
+            onChange={(event) =>
+              this.setState({ departDate: event.target.value })
+            }
+            placeholder="departDate..."
+            className="border-2 border-gray-600 p-2 rounded-md"
+          />
+          <button onClick={searchFlight}>Search</button>
+        </form>
 
         {weatherFound && (
           <section className="weather">
