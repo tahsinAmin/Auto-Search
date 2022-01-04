@@ -16,8 +16,8 @@
 - [x] Able to show json data in page
 - [x] Able to show the whole location in the map
 - [x] Have 2 inputs like the above.
-- [x] Work with Handle Submit
-- [ ] Show Weather data with the given values
+- [x] Weather API taking dynamic values from input
+- [ ] Show Dynamic Weather data with the given values
 
 - [ ] show a message if no flights found
 - [ ] Make the toggle work
@@ -27,6 +27,7 @@
 - [x] Bring the design in one place
 - [x] price arrow button should increase size when hover
 - [x] Search Flight button needs to be moveable once clicked
+- [x] Plane icon added
 - [ ] Show search and date with modal
 
 - [ ] Must replace bus icon wqith plane icon
@@ -37,7 +38,7 @@
 
 - [ ] Remove countryName variable if not needed
 - [ ] Better fonts needed
-- [ ] bus icon needs to be removed
+
 - [ ] Is there a way to figure out if any of my npm packages is unused or installed by mistake?
 
 ## Npm pakages needed

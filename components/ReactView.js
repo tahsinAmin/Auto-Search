@@ -303,7 +303,7 @@ export default function ReactView() {
           </div>
         </section>
         <section className='filter-flights flex mb-20'>
-          <div className='filter w-4/12 mt-4  border-r-2 mr-4 sticky top-0'>
+          <div className='filter w-4/12 mt-4  border-r-2 mr-4 sticky top-0 pr-4'>
             <div className='flex items-center space-x-2'>
               <svg
                 class='w-6 h-6'
@@ -422,7 +422,7 @@ export default function ReactView() {
               </div>
             </div>
 
-            <div className='flight-lists flex flex-col pl-4 pr-5 drop-shadow-xl'>
+            <div className='flight-lists flex flex-col pl-4 drop-shadow-xl'>
               <div
                 className='
               flight-list-item cursor-pointer hover:scale-[102%]
@@ -464,11 +464,11 @@ export default function ReactView() {
                       <div className='text-5xl font-regular'>00:15</div>
                       <div className='text-3xl font-light'>DAC</div>
                     </div>
-                    <div>
+                    <div className='mx-4'>
                       <img
                         className='max-w-full nav-row-logo'
                         loading='lazy'
-                        src='/img/car-direction.png'
+                        src='/img/plane.png'
                         alt='rentByOwner'
                         width='182'
                         height='26'
@@ -543,11 +543,11 @@ export default function ReactView() {
                       <div className='text-5xl font-regular'>00:15</div>
                       <div className='text-3xl font-light'>DAC</div>
                     </div>
-                    <div>
+                    <div className='mx-4'>
                       <img
                         className='max-w-full nav-row-logo'
                         loading='lazy'
-                        src='/img/car-direction.png'
+                        src='/img/plane.png'
                         alt='rentByOwner'
                         width='182'
                         height='26'
@@ -622,11 +622,11 @@ export default function ReactView() {
                       <div className='text-5xl font-regular'>00:15</div>
                       <div className='text-3xl font-light'>DAC</div>
                     </div>
-                    <div>
+                    <div className='mx-4'>
                       <img
                         className='max-w-full nav-row-logo'
                         loading='lazy'
-                        src='/img/car-direction.png'
+                        src='/img/plane.png'
                         alt='rentByOwner'
                         width='182'
                         height='26'
@@ -701,11 +701,11 @@ export default function ReactView() {
                       <div className='text-5xl font-regular'>00:15</div>
                       <div className='text-3xl font-light'>DAC</div>
                     </div>
-                    <div>
+                    <div className='mx-4'>
                       <img
                         className='max-w-full nav-row-logo'
                         loading='lazy'
-                        src='/img/car-direction.png'
+                        src='/img/plane.png'
                         alt='rentByOwner'
                         width='182'
                         height='26'
@@ -780,11 +780,11 @@ export default function ReactView() {
                       <div className='text-5xl font-regular'>00:15</div>
                       <div className='text-3xl font-light'>DAC</div>
                     </div>
-                    <div>
+                    <div className='mx-4'>
                       <img
                         className='max-w-full nav-row-logo'
                         loading='lazy'
-                        src='/img/car-direction.png'
+                        src='/img/plane.png'
                         alt='rentByOwner'
                         width='182'
                         height='26'
@@ -859,11 +859,11 @@ export default function ReactView() {
                       <div className='text-5xl font-regular'>00:15</div>
                       <div className='text-3xl font-light'>DAC</div>
                     </div>
-                    <div>
+                    <div className='mx-4'>
                       <img
                         className='max-w-full nav-row-logo'
                         loading='lazy'
-                        src='/img/car-direction.png'
+                        src='/img/plane.png'
                         alt='rentByOwner'
                         width='182'
                         height='26'
@@ -938,11 +938,11 @@ export default function ReactView() {
                       <div className='text-5xl font-regular'>00:15</div>
                       <div className='text-3xl font-light'>DAC</div>
                     </div>
-                    <div>
+                    <div className='mx-4'>
                       <img
                         className='max-w-full nav-row-logo'
                         loading='lazy'
-                        src='/img/car-direction.png'
+                        src='/img/plane.png'
                         alt='rentByOwner'
                         width='182'
                         height='26'
