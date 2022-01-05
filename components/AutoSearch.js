@@ -531,7 +531,8 @@ function AutoSearch() {
                           {f["start_iata"]}
                         </div>
                       </div>
-                      <div className="mx-4">
+                      <div className="mx-4 flex flex-col text-center">
+                        <div className="text-sm">{f["duration"]}</div>
                         <img
                           className="max-w-full nav-row-logo"
                           loading="lazy"
@@ -540,6 +541,7 @@ function AutoSearch() {
                           width="182"
                           height="26"
                         />
+                        <div className="text-sm">{f["stops"]} stop(s)</div>
                       </div>
                       <div className="flex flex-col items-center text-center">
                         <div className="text-5xl font-regular">

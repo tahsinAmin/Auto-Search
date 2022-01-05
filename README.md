@@ -52,8 +52,8 @@ If it doesn't work for the first time, try again with the same input after 10 se
 - [x] Search Flight button needs to be moveable once clicked
 - [x] Plane icon added
 - [x] Hero image added
-- [ ] Add stops and duration over the plane
-- [ ] Make the weather show dynamically toCity input only
+- [x] Add stops and duration over the plane
+- [x] Make the weather show dynamically toCity input only
 - [ ] Show search and date with modal
 - [ ] Use of Framer Motion to bounce weather icons
 
