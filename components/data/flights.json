@@ -11,7 +11,7 @@
                 "end_place": "Vancouvar",
                 "end_iata": "VAN",
                 "end_time": "2021-01-11 00:50",
-                "price": "91000",
+                "price": "25000",
                 "seats_avail": "17",
                 "start_place": "Dhaka",
                 "start_iata": "DAC",
@@ -36,13 +36,13 @@
                 "flight_name": "Kuwait Airways",
                 "end_place": "Vancouvar",
                 "end_iata": "VAN",
-                "end_time": "2021-01-11 00:50",
-                "price": "91000",
+                "end_time": "2021-01-11 01:50",
+                "price": "20000",
                 "seats_avail": "17",
                 "start_place": "Dhaka",
                 "start_iata": "DAC",
                 "start_time": "2021-01-10 00:15",
-                "stops": "2"
+                "stops": "3"
               }
             ]
           }

@@ -6,7 +6,25 @@ export default function ModalDemo() {
   return (
     <div>
       <button onClick={() => setModalIsOpen(true)}>Open modal</button>
-      <Modal isOpen={modalIsOpen} onRequestClose={() => setModalIsOpen(false)}>
+      <Modal
+        isOpen={modalIsOpen}
+        shouldCloseOnOverlayClick={false}
+        onRequestClose={() => setModalIsOpen(false)}
+        customStyles={{
+          overlay: {
+            backgroundColor: "gray",
+          },
+          content: {
+            color: "blue",
+            top: "50%",
+            left: "50%",
+            right: "auto",
+            bottom: "auto",
+            marginRight: "-50%",
+            transform: "translate(-50%, -50%)",
+          },
+        }}
+      >
         <h2>Modal Title</h2>
         <p>
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit iste

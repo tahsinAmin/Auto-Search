@@ -1,3 +1,5 @@
+Try with "Vancouver , Canada, Vancouver International Airport (YVR)" for "From..." search input and "Dhaka, Bangladesh, Hazrat Shahjalal International Airport (DAC)" for "To..." search input
+
 # TODOs
 
 - Make mobile friendly (integrate tap and swipe actions)
@@ -18,6 +20,7 @@
 - [x] Have 2 inputs like the above.
 - [x] Weather API taking dynamic values from input
 - [x] Show Dynamic Weather data with the given values (AutoSearch.js)
+- [x] Show Flights for 2 specific names in input, vancouver (1st) and Dhaka
 
 - [ ] show a message if no flights found
 - [ ] Error: Request failed with status code 400 (Showing when removing all inputs from the input, cityNAmeT)
@@ -30,6 +33,7 @@
 - [x] Search Flight button needs to be moveable once clicked
 - [x] Plane icon added
 - [x] Hero image added
+- [ ] Add stops and duration over the plane
 - [ ] Make the weather show dynamically toCity input only
 - [ ] Show search and date with modal
 - [ ] Use of Framer Motion to bounce weather icons
@@ -61,6 +65,7 @@
 - [x] npm packages usually encourages to import the css styles and theme in src/App.css file. However, NextJs do not come with that. Sol: Put the imports in tyhe same component where the npm 8is being used.
 - [x] Date is decreasing by 1 when we show in output. Sol: Use toLocaleString()
 - [x] Removing spaces at the start or end of a string. Sol: .replace(/^\s+|\s+$/g, "");
+- [x] For's handleSubmit was not wroking. sol: On form, we write, "onsubmit={handleSubmit}" and in the function we, wreite, "handleSubmit = (e) => { e.preventDefault();..."
 - [ ] When I type, the heading also changes with it.
 - [ ] when I hit search button twice, it gives an error. Probably due to "Dhaka" and not "dhaka"
 - [ ] how to remove defualt date icon from date-input
