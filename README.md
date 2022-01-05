@@ -17,9 +17,10 @@
 - [x] Able to show the whole location in the map
 - [x] Have 2 inputs like the above.
 - [x] Weather API taking dynamic values from input
-- [ ] Show Dynamic Weather data with the given values
+- [x] Show Dynamic Weather data with the given values (AutoSearch.js)
 
 - [ ] show a message if no flights found
+- [ ] Error: Request failed with status code 400 (Showing when removing all inputs from the input, cityNAmeT)
 - [ ] Make the toggle work
 
 ### UI/UX
@@ -29,6 +30,7 @@
 - [x] Search Flight button needs to be moveable once clicked
 - [x] Plane icon added
 - [x] Hero image added
+- [ ] Make the weather show dynamically toCity input only
 - [ ] Show search and date with modal
 - [ ] Use of Framer Motion to bounce weather icons
 

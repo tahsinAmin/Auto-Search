@@ -7,10 +7,10 @@ import AutoS1 from "../components/AutoS1";
 export default function Home() {
   return (
     <div className='App h-screen'>
-      {/* <AutoSearch /> */}
+      <AutoSearch />
       {/* <ModalDemo /> */}
       {/* <DateDemo /> */}
-      <ReactView />
+      {/* <ReactView /> */}
       {/* <AutoS1 /> */}
     </div>
   );
