@@ -10,7 +10,7 @@ export default function Home() {
       <AutoSearch />
       {/* <ModalDemo /> */}
       {/* <DateDemo /> */}
-      {/* <ReactView /> */}
+      <ReactView />
       {/* <AutoS1 /> */}
     </div>
   );

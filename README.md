@@ -1,4 +1,23 @@
-Try with "Vancouver , Canada, Vancouver International Airport (YVR)" for "From..." search input and "Dhaka, Bangladesh, Hazrat Shahjalal International Airport (DAC)" for "To..." search input
+This is a [NextJs](https://nextjs.org/) project.
+
+# Getting Started
+
+First, install all the dependencies:
+
+```bash
+npm install
+```
+
+Second, run the development server:
+
+```bash
+npm run dev
+```
+
+Open the browswer and write [http://localhost:3000](http://localhost:3000) and hit enter
+
+In first input, search for "Vancouver , Canada, Vancouver International Airport (YVR)" and for second input, search for "Dhaka, Bangladesh, Hazrat Shahjalal International Airport (DAC)". (Note:
+If it doesn't work for the first time, try again with the same input after 10 seconds)
 
 # TODOs
 
