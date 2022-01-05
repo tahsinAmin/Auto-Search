@@ -12,6 +12,7 @@ function AutoSearch() {
   const [cityNT, setCityNT] = useState("");
   const [countryNameO, setCountryNameO] = useState("");
   const [countryNameT, setCountryNameT] = useState("");
+  const [startDate, setStartDate] = useState("");
   const [flightsFound, setFlightsFound] = useState(false);
   const [suggestionsO, setSuggestionsO] = useState([]);
   const [suggestionsT, setSuggestionsT] = useState([]);
@@ -34,7 +35,7 @@ function AutoSearch() {
   const onChangeHandlerO = (cityName) => {
     let matches = [];
     loadCities(cityName);
-    if (cityName.length > 0) {
+    if (cityName.length > 3) {
       matches = cities.filter((usr) => {
         const regex = new RegExp(`${cityName}`, "gi");
         return usr.city.match(regex);
@@ -54,7 +55,7 @@ function AutoSearch() {
     }
     let matches = [];
     loadCities(cityName);
-    if (cityName.length > 0) {
+    if (cityName.length > 3) {
       matches = cities.filter((usr) => {
         const regex = new RegExp(`${cityName}`, "gi");
         return usr.city.match(regex);
@@ -63,6 +64,12 @@ function AutoSearch() {
     setSuggestionsT(matches);
     setCityNameT(cityName);
   };
+
+  const onChangeHandlerDate = (inpDate) => {
+    setStartDate(inpDate);
+    console.log(inpDate);
+  };
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setCountryNameT(
@@ -89,7 +96,7 @@ function AutoSearch() {
         .replace(/^\s+|\s+$/g, "")
         .toLocaleLowerCase()
     );
-
+    // http://api.weatherapi.com/v1/forecast.json?key=e6a73467a3e94aa184c122435212812&q=toronto&dt=2022.01.20
     axios
       .get(
         `https://api.weatherapi.com/v1/history.json?key=e6a73467a3e94aa184c122435212812&q=${countryNameT}&q=${cityNT}&dt=2021.12.30&aqi=yes`
@@ -256,6 +263,16 @@ function AutoSearch() {
               </div>
             ))}
         </div>
+        <div className="container mx-auto">
+          <input
+            type="date"
+            name="input-search-2"
+            className="border rounded-sm w-full mt-4"
+            placeholder="To...."
+            onChange={(e) => onChangeHandlerDate(e.target.value)}
+            value={startDate}
+          />
+        </div>
         <button
           type="submit"
           className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
@@ -379,8 +396,8 @@ function AutoSearch() {
             <div className="flex space-x-8 mt-4 items-center">
               <div className="flex space-x-4">
                 <FaPlaneDeparture />
-                <h2>
-                  <b>{cityNameO}</b> to <b>{cityNameT}</b>
+                <h2 className="uppercase">
+                  <b>{cityNO}</b> - <b>{cityNT}</b>
                 </h2>
               </div>
               {/* <span>

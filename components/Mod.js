@@ -1,6 +1,9 @@
-import React from "react";
-
+import React, { useState } from "react";
 export default function Mod() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const handleSubmit = () => {
+    setIsModalOpen(false);
+  };
   return (
     <div>
       <div
@@ -88,7 +91,7 @@ export default function Mod() {
             /> */}
               <div
                 class="flex bg-white items-center"
-                onClick={() => setModalIsOpen(true)}
+                onClick={() => setIsModalOpen(true)}
               >
                 <svg
                   class="w-6 h-6 text-[#00CD92] pl-1"
@@ -134,9 +137,44 @@ export default function Mod() {
           </div>
         </div>
       </div>
-      <div className="bg-gray-700 bg-opacity-50 absolute inset-0">
-        <div className="bg-gray-200">This is the modal</div>
-      </div>
+      {isModalOpen && (
+        <div className="flex justify-center items-center bg-black bg-opacity-50 absolute inset-0">
+          <div className="bg-gray-200 max-w-md py-1 px-2 rounded-lg shadow-xl">
+            <div className="flex justify-between items-center">
+              <h4 className="text-lg font-bold">confirm, Delete?</h4>
+              <svg
+                class="w-6 h-6"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M6 18L18 6M6 6l12 12"
+                ></path>
+              </svg>
+            </div>
+            <div className="mt-2">
+              <p>
+                lorem loremloremloremloremloremloremlorem lorem
+                loremloremloremloremloremloremlorem
+              </p>
+            </div>
+            <div className="mt-3 flex justify-end space-x-3">
+              <button className="px-3 p-1 rounded-lg">Cancel</button>
+              <button
+                className="px-3 p-1 rounded-lg bg-red-500"
+                onClick={handleSubmit}
+              >
+                Delete
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

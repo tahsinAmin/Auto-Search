@@ -44,11 +44,13 @@ Open the browswer and write [http://localhost:3000](http://localhost:3000) and h
 - [x] Show Flights for 2 specific names in input, vancouver (1st) and Dhaka
 - [x] show a message if no flights found
 - [x] Make data fetching from json file as dynamic
-
-- [ ] Error: Request failed with status code 400 (Showing when removing all inputs from the input, cityNAmeT)
+- [x] Error: Request failed with status code 400 (Showing when removing all inputs from the input, cityNAmeT)
+- [ ] Implement a date
+- [ ] For Restricting date = https://stackoverflow.com/questions/32378590/set-date-input-fields-max-date-to-today
 - [ ] Make the toggle work
-- [ ] dynamic data
+- [ ] First make a demo frontend project, then add express to it.
 - [ ] Fetch data from server side, not client side as need to hit twice. So, need to use ExpressJS
+- [ ] If Express is included, only then we can update the json file and edit the date to the date selected by the client
 
 ### UI/UX
 
@@ -59,7 +61,10 @@ Open the browswer and write [http://localhost:3000](http://localhost:3000) and h
 - [x] Hero image added
 - [x] Add stops and duration over the plane
 - [x] Make the weather show dynamically toCity input only
+- [ ] the date that client selects, make sure that date's weather is showing.
+- [ ] rename the weather section guive a headiong to show that it's the desintations' weather, like weather forecast of {destinationName}
 - ~~Have the live link in GitHub~~
+- [ ] Suggestion box needs to be bigger to click
 - [ ] In the hero section, make it cenbter, at the left, there's a text and at the right we have the input
 - [ ] Show search and date with modal
 - [ ] Have a loading div to show that the data is processing
