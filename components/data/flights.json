@@ -1,8 +1,8 @@
 [
   {
     "2022-01-10": {
-      "Bangladesh": {
-        "Dhaka": {
+      "bangladesh": {
+        "dhaka": {
           "canada": {
             "vancouvar": [
               {
@@ -44,7 +44,8 @@
                 "start_time": "2021-01-10 00:15",
                 "stops": "3"
               }
-            ]
+            ],
+            "toronto": []
           }
         }
       }

@@ -40,7 +40,7 @@ If it doesn't work for the first time, try again with the same input after 10 se
 - [x] Weather API taking dynamic values from input
 - [x] Show Dynamic Weather data with the given values (AutoSearch.js)
 - [x] Show Flights for 2 specific names in input, vancouver (1st) and Dhaka
-
+- [ ] Make data fetching from json file as dynamic
 - [ ] show a message if no flights found
 - [ ] Error: Request failed with status code 400 (Showing when removing all inputs from the input, cityNAmeT)
 - [ ] Make the toggle work
@@ -54,7 +54,10 @@ If it doesn't work for the first time, try again with the same input after 10 se
 - [x] Hero image added
 - [x] Add stops and duration over the plane
 - [x] Make the weather show dynamically toCity input only
+- ~~Have the live link in GitHub~~
+- [ ] In the hero section, m,ake it cenbter, at the lefty, there's a text and at the right we have the input
 - [ ] Show search and date with modal
+- [ ] Have a loading div to show that the data is processing
 - [ ] Use of Framer Motion to bounce weather icons
 
 ## Tiny tasks
