@@ -16,8 +16,11 @@ npm run dev
 
 Open the browswer and write [http://localhost:3000](http://localhost:3000) and hit enter
 
-In first input, search for "Vancouver , Canada, Vancouver International Airport (YVR)" and for second input, search for "Dhaka, Bangladesh, Hazrat Shahjalal International Airport (DAC)". (Note:
-If it doesn't work for the first time, try again with the same input after 10 seconds)
+# Features
+
+- To check weather data In first input, search for "Vancouver , Canada, Vancouver International Airport (YVR)" and for second input, search for "Dhaka, Bangladesh, Hazrat Shahjalal International Airport (DAC)".
+  (Note:If it doesn't work for the first time, try again with the same input after 10 seconds)
+-
 
 # TODOs
 
@@ -32,7 +35,6 @@ If it doesn't work for the first time, try again with the same input after 10 se
 - showing country name
 - showiung weather data
 
-- [x] Showing the city name in capiatl letter
 - [x] Able to Fetch data from local json file in ReactJS
 - [x] Able to show json data in page
 - [x] Able to show the whole location in the map
@@ -40,10 +42,13 @@ If it doesn't work for the first time, try again with the same input after 10 se
 - [x] Weather API taking dynamic values from input
 - [x] Show Dynamic Weather data with the given values (AutoSearch.js)
 - [x] Show Flights for 2 specific names in input, vancouver (1st) and Dhaka
-- [ ] Make data fetching from json file as dynamic
-- [ ] show a message if no flights found
+- [x] show a message if no flights found
+- [x] Make data fetching from json file as dynamic
+
 - [ ] Error: Request failed with status code 400 (Showing when removing all inputs from the input, cityNAmeT)
 - [ ] Make the toggle work
+- [ ] dynamic data
+- [ ] Fetch data from server side, not client side as need to hit twice. So, need to use ExpressJS
 
 ### UI/UX
 
@@ -55,7 +60,7 @@ If it doesn't work for the first time, try again with the same input after 10 se
 - [x] Add stops and duration over the plane
 - [x] Make the weather show dynamically toCity input only
 - ~~Have the live link in GitHub~~
-- [ ] In the hero section, m,ake it cenbter, at the lefty, there's a text and at the right we have the input
+- [ ] In the hero section, make it cenbter, at the left, there's a text and at the right we have the input
 - [ ] Show search and date with modal
 - [ ] Have a loading div to show that the data is processing
 - [ ] Use of Framer Motion to bounce weather icons
@@ -86,8 +91,19 @@ If it doesn't work for the first time, try again with the same input after 10 se
 - [x] Json fil data recieved but not able to show the data using ".map()". Sol: Used '{}' instead of '()' after '=>'
 - [x] npm packages usually encourages to import the css styles and theme in src/App.css file. However, NextJs do not come with that. Sol: Put the imports in tyhe same component where the npm 8is being used.
 - [x] Date is decreasing by 1 when we show in output. Sol: Use toLocaleString()
-- [x] Removing spaces at the start or end of a string. Sol: .replace(/^\s+|\s+$/g, "");
+- [x] Removing spaces at the start or end of a string. Sol:
+
+```bash
+.replace(/^\s+|\s+$/g, "");
+```
+
 - [x] For's handleSubmit was not wroking. sol: On form, we write, "onsubmit={handleSubmit}" and in the function we, wreite, "handleSubmit = (e) => { e.preventDefault();..."
+- [x] Couldn't fetch the josn data dynamically. Sol: One of my dictionary key parameter values had a trailing space so, had to
+
+```bash
+cityNameT.split(",")[0].replace(/^\s+|\s+$/g, "").toLocaleLowerCase()
+```
+
 - [ ] When I type, the heading also changes with it.
 - [ ] when I hit search button twice, it gives an error. Probably due to "Dhaka" and not "dhaka"
 - [ ] how to remove defualt date icon from date-input
@@ -101,6 +117,7 @@ If it doesn't work for the first time, try again with the same input after 10 se
 - How to read local json file in ReactJS
 - Adding fonts in ReactJS
 - Learned how to save data in the placeholder => placholder = {placeHold || "Search..."} then deconstruct it in the functional parameters
+- All HTTP response status codes that are in the 4xx category are considered client error responses
 
 ## For Refactor
 

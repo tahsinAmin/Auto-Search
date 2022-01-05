@@ -77,8 +77,18 @@ function AutoSearch() {
         .replace(/^\s+|\s+$/g, "")
         .toLocaleLowerCase()
     );
-    setCityNT(cityNameT.split(",")[0].toLocaleLowerCase());
-    setCityNO(cityNameO.split(",")[0].toLocaleLowerCase());
+    setCityNT(
+      cityNameT
+        .split(",")[0]
+        .replace(/^\s+|\s+$/g, "")
+        .toLocaleLowerCase()
+    );
+    setCityNO(
+      cityNameO
+        .split(",")[0]
+        .replace(/^\s+|\s+$/g, "")
+        .toLocaleLowerCase()
+    );
 
     axios
       .get(
@@ -133,10 +143,9 @@ function AutoSearch() {
         setWeatherFound(true);
       })
       .then((res) => {
-        console.log(countryNameO, cityNO, countryNameT, cityNT);
+        console.log(countryNameT, cityNT, countryNameO, cityNO);
         setAllFlights(
-          // data[0]["2022-01-10"][countryNameT][cityNT][countryNameO][cityNO]
-          data[0]["2022-01-10"].bangladesh.dhaka.canada.vancouvar
+          data[0]["2022-01-10"][countryNameT][cityNT][countryNameO][cityNO]
         );
         setFlightsFound(true);
       });
@@ -534,126 +543,119 @@ function AutoSearch() {
         )}
         {flightsFound && (
           <section className="filter-flights flex mb-20">
-            <div className="filter w-4/12 mt-4  border-r-2 mr-4 sticky top-0 pr-4">
-              <div className="flex items-center space-x-2">
-                <svg
-                  class="w-6 h-6"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"
-                  ></path>
-                </svg>
-                <h2 className="text-2xl font-medium">
-                  <strike>Filter by:</strike>
-                </h2>
-              </div>
-              <div className="mt-6 text-lg">
-                <h3 className="font-medium">Airports</h3>
-                <div className="flex space-x-2 items-center mt-2">
-                  <input type="checkbox" id="scales" name="scales" />{" "}
-                  <span className="truncate">
-                    Hazrat Shahjalal International Airport (DAC)
-                  </span>
+            {allFlights.length > 0 && (
+              <div className="filter w-4/12 mt-4  border-r-2 mr-4 sticky top-0 pr-4">
+                <div className="flex items-center space-x-2">
+                  <svg
+                    class="w-6 h-6"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"
+                    ></path>
+                  </svg>
+                  <h2 className="text-2xl font-medium">
+                    <strike>Filter by:</strike>
+                  </h2>
                 </div>
-                <div className="flex space-x-2 items-center mt-2">
-                  <input type="checkbox" id="scales" name="scales" />{" "}
-                  <span className="truncate">
-                    Hazrat Shahjalal International Airport (DAC)
-                  </span>
+                <div className="mt-6 text-lg">
+                  <h3 className="font-medium">Airports</h3>
+                  <div className="flex space-x-2 items-center mt-2">
+                    <input type="checkbox" id="scales" name="scales" />{" "}
+                    <span className="truncate">
+                      Vancouver International Airport (YVR)
+                    </span>
+                  </div>
+                  <div className="flex space-x-2 items-center mt-2">
+                    <input type="checkbox" id="scales" name="scales" />{" "}
+                    <span className="truncate">
+                      Vancouver Harbour Water Aerodrome (CXH)
+                    </span>
+                  </div>
                 </div>
-                <div className="flex space-x-2 items-center mt-2">
-                  <input type="checkbox" id="scales" name="scales" />{" "}
-                  <span className="truncate">
-                    Hazrat Shahjalal International Airport (DAC)
-                  </span>
-                </div>
-                <div className="flex space-x-2 items-center mt-2">
-                  <input type="checkbox" id="scales" name="scales" />{" "}
-                  <span className="truncate">
-                    Hazrat Shahjalal International Airport (DAC)
-                  </span>
-                </div>
-              </div>
-              <div className="mt-6 text-lg">
-                <h3 className="font-medium">Airlines</h3>
-                <div className="flex space-x-2 items-center mt-2">
-                  <input type="checkbox" id="scales" name="scales" />{" "}
-                  <span>Bangladesh Biman</span>
-                </div>
-                <div className="flex space-x-2 items-center mt-2">
-                  <input type="checkbox" id="scales" name="scales" />{" "}
-                  <span>Qatar Airways</span>
-                </div>
-                <div className="flex space-x-2 items-center mt-2">
-                  <input type="checkbox" id="scales" name="scales" />{" "}
-                  <span>Kuwait Airways</span>
-                </div>
-                <div className="flex space-x-2 items-center mt-2">
-                  <input type="checkbox" id="scales" name="scales" />{" "}
-                  <span>Emirates</span>
+                <div className="mt-6 text-lg">
+                  <h3 className="font-medium">Airlines</h3>
+                  <div className="flex space-x-2 items-center mt-2">
+                    <input type="checkbox" id="scales" name="scales" />{" "}
+                    <span>Bangladesh Biman</span>
+                  </div>
+                  <div className="flex space-x-2 items-center mt-2">
+                    <input type="checkbox" id="scales" name="scales" />{" "}
+                    <span>Qatar Airways</span>
+                  </div>
+                  <div className="flex space-x-2 items-center mt-2">
+                    <input type="checkbox" id="scales" name="scales" />{" "}
+                    <span>Kuwait Airways</span>
+                  </div>
+                  <div className="flex space-x-2 items-center mt-2">
+                    <input type="checkbox" id="scales" name="scales" />{" "}
+                    <span>Emirates</span>
+                  </div>
                 </div>
               </div>
-            </div>
+            )}
+
             <div className="all-flights w-8/12 flex flex-col space-y-4 mt-4 border-gray-200 text-lg">
               <div className="flights-found">
                 {allFlights.length} flights found
               </div>
-              <div className="sort-flights flex space-x-6">
-                <span className="text-gray-600">Sort by: </span>
-                <div className="flex space-x-10 text-blue-600">
-                  <div className="flex space-x-1">
-                    <span className=" active text-gray-700 font-semibold">
-                      <strike>Pricing</strike>
-                    </span>
-                    <div
-                      className="h-10 rounded-lg flex cursor-pointer hover:scale-105
-              transform
-              transition
-              duration-300
-              ease-out"
-                    >
-                      <svg
-                        class="down-price price-toggle w-7 h-7 text-gray-800 font-semibold"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
+              {allFlights.length > 0 && (
+                <div className="sort-flights flex space-x-6">
+                  <span className="text-gray-600">Sort by: </span>
+                  <div className="flex space-x-10 text-blue-600">
+                    <div className="flex space-x-1">
+                      <span className=" active text-gray-700 font-semibold">
+                        <strike>Pricing</strike>
+                      </span>
+                      <div
+                        className="h-10 rounded-lg flex cursor-pointer hover:scale-105
+                transform
+                transition
+                duration-300
+                ease-out"
                       >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M16 17l-4 4m0 0l-4-4m4 4V3"
-                        ></path>
-                      </svg>
-                      <svg
-                        class="up-price hidden price-toggle w-7 h-7 text-gray-800 font-semibold"
-                        fill="none"
-                        stroke="currentColor"
-                        viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="2"
-                          d="M8 7l4-4m0 0l4 4m-4-4v18"
-                        ></path>
-                      </svg>
+                        <svg
+                          class="down-price price-toggle w-7 h-7 text-gray-800 font-semibold"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M16 17l-4 4m0 0l-4-4m4 4V3"
+                          ></path>
+                        </svg>
+                        <svg
+                          class="up-price hidden price-toggle w-7 h-7 text-gray-800 font-semibold"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                          xmlns="http://www.w3.org/2000/svg"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M8 7l4-4m0 0l4 4m-4-4v18"
+                          ></path>
+                        </svg>
+                      </div>
                     </div>
-                  </div>
 
-                  {/* <span>Duration</span>
-                <span>Cheapest</span> */}
+                    {/* <span>Duration</span>
+                  <span>Cheapest</span> */}
+                  </div>
                 </div>
-              </div>
+              )}
 
               <div className="flight-lists flex flex-col pl-4 drop-shadow-xl">
                 {allFlights.map((f) => (
