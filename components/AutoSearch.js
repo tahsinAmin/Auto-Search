@@ -1,7 +1,12 @@
 import { useState } from "react";
 import axios from "axios";
-import { FaPlaneDeparture, FaPlane } from "react-icons/fa";
+import { FaPlane } from "react-icons/fa";
 import data from "./data/flights.json";
+
+import "react-datepicker/dist/react-datepicker.css";
+
+// CSS Modules, react-datepicker-cssmodules.css
+// import 'react-datepicker/dist/react-datepicker-cssmodules.css';
 
 function AutoSearch() {
   const [allFlights, setAllFlights] = useState([]);
@@ -12,7 +17,8 @@ function AutoSearch() {
   const [cityNT, setCityNT] = useState("");
   const [countryNameO, setCountryNameO] = useState("");
   const [countryNameT, setCountryNameT] = useState("");
-  const [startDate, setStartDate] = useState("");
+
+  const [departDate, setDepartDate] = useState("");
   const [flightsFound, setFlightsFound] = useState(false);
   const [suggestionsO, setSuggestionsO] = useState([]);
   const [suggestionsT, setSuggestionsT] = useState([]);
@@ -74,7 +80,7 @@ function AutoSearch() {
   };
 
   const onChangeHandlerDate = (inpDate) => {
-    setStartDate(inpDate);
+    setDepartDate(inpDate);
     console.log(inpDate);
   };
 
@@ -108,7 +114,7 @@ function AutoSearch() {
     // `https://api.weatherapi.com/v1/history.json?key=e6a73467a3e94aa184c122435212812&q=${countryNameT}&q=${cityNT}&dt=2021.12.30&aqi=yes`
     axios
       .get(
-        `http://api.weatherapi.com/v1/forecast.json?key=e6a73467a3e94aa184c122435212812&q=${cityNT}&dt=${startDate}`
+        `http://api.weatherapi.com/v1/forecast.json?key=e6a73467a3e94aa184c122435212812&q=${cityNT}&dt=${departDate}`
       )
       .then((res) => {
         const hour = res.data.forecast.forecastday[0].hour;
@@ -239,7 +245,7 @@ function AutoSearch() {
           {suggestionsO &&
             suggestionsO.map(({ city, name }, i) => (
               <div
-                className="border w-full cursor-pointer border-b-1 hover:bg-blue-100 border-l-1 border-r-1"
+                className="border w-full cursor-pointer border-b-1 hover:bg-blue-100 py-2 border-l-1 border-r-1"
                 key={i}
                 onClick={() => onSuggestHandlerO(city, name)}
               >
@@ -264,7 +270,7 @@ function AutoSearch() {
           {suggestionsT &&
             suggestionsT.map(({ city, name }, i) => (
               <div
-                className="border w-full cursor-pointer border-b-1 hover:bg-blue-100 border-l-1 border-r-1"
+                className="border w-full cursor-pointer border-b-1 hover:bg-blue-100 py-2 border-l-1 border-r-1"
                 key={i}
                 onClick={() => onSuggestHandlerT(city, name)}
               >
@@ -280,7 +286,7 @@ function AutoSearch() {
             className="border rounded-sm w-full mt-4"
             placeholder="To...."
             onChange={(e) => onChangeHandlerDate(e.target.value)}
-            value={startDate}
+            value={departDate}
           />
         </div>
         <button
@@ -376,11 +382,6 @@ function AutoSearch() {
               <input
                 type="text"
                 placeholder="Depart date?"
-                className="p-1 border-gray-600 border-b-2 outline-none"
-              />
-              <input
-                type="text"
-                placeholder="Return Date"
                 className="p-1 border-gray-600 border-b-2 outline-none"
               />
             </div>

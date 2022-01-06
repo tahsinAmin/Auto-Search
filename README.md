@@ -26,6 +26,10 @@ Open the browswer and write [http://localhost:3000](http://localhost:3000) and h
 ![flights](https://user-images.githubusercontent.com/29802879/148372088-d1c50338-e073-4451-a786-2c8367d79788.png)
 ![noFlights](https://user-images.githubusercontent.com/29802879/148372173-f2f1a922-5c5d-41c9-a745-65eeb6b0ab69.png)
 
+![alt text](https://github.com/tahsin/Auto-Search/blob/main/noFlights.png?raw=true)
+
+<!-- ![alt text](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true) -->
+
 # Tasks, Todos & Problems face while making the project (Optional)
 
 ## TODOs
@@ -69,11 +73,11 @@ Open the browswer and write [http://localhost:3000](http://localhost:3000) and h
 - [x] Hero image added
 - [x] Add stops and duration over the plane
 - [x] Make the weather show dynamically toCity input only
-- [ ] rename the weather section guive a headiong to show that it's the desintations' weather, like weather forecast of {destinationName}
-- [ ] Add image to your repo
+- [x] Add image to your repo
 - ~~Have the live link in GitHub~~
-- [ ] Suggestion box needs to be bigger to click
-- [ ] In the hero section, make it cenbter, at the left, there's a text and at the right we have the input
+- [x] Suggestion box needs to be bigger to click
+- [ ] Get the search button out of the flex
+- [ ] In the hero section, make it center, at the left, there's a text and at the right we have the input
 - [ ] Show search and date with modal
 - [ ] Have a loading div to show that the data is processing
 - [ ] Use of Framer Motion to bounce weather icons
@@ -121,6 +125,7 @@ cityNameT.split(",")[0].replace(/^\s+|\s+$/g, "").toLocaleLowerCase()
 - [ ] how to remove defualt date icon from date-input
 - [ ] How to convert my class based compoent to functional component?
 - [ ] how to get the date as YYYY-MM-DD from IOstring => check date = date.split("-").reverse().join("-");
+- [ ] if i give any special charatcers, it gives an error.
 
 ## What I learned
 
