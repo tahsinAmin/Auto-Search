@@ -97,9 +97,10 @@ function AutoSearch() {
         .toLocaleLowerCase()
     );
     // http://api.weatherapi.com/v1/forecast.json?key=e6a73467a3e94aa184c122435212812&q=toronto&dt=2022.01.20
+    // `https://api.weatherapi.com/v1/history.json?key=e6a73467a3e94aa184c122435212812&q=${countryNameT}&q=${cityNT}&dt=2021.12.30&aqi=yes`
     axios
       .get(
-        `https://api.weatherapi.com/v1/history.json?key=e6a73467a3e94aa184c122435212812&q=${countryNameT}&q=${cityNT}&dt=2021.12.30&aqi=yes`
+        `http://api.weatherapi.com/v1/forecast.json?key=e6a73467a3e94aa184c122435212812&q=${cityNT}&dt=${startDate}`
       )
       .then((res) => {
         const hour = res.data.forecast.forecastday[0].hour;

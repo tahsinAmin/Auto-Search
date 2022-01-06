@@ -19,16 +19,19 @@ Open the browswer and write [http://localhost:3000](http://localhost:3000) and h
 # Features
 
 - To check weather data In first input, search for "Vancouver , Canada, Vancouver International Airport (YVR)" and for second input, search for "Dhaka, Bangladesh, Hazrat Shahjalal International Airport (DAC)".
-  (Note:If it doesn't work for the first time, try again with the same input after 10 seconds)
--
+  (Note:If it doesn't work for the first time, try again with the same input after 3 seconds)
+- No flights available if input is given Toronto to Dhaka
+- for a given future date, it shows a weather forecast of what wheather likely to be on that whole day
 
-# TODOs
+# Tasks, Todos & Problems face while making the project (Optional)
+
+## TODOs
 
 - Make mobile friendly (integrate tap and swipe actions)
 - Improve README.md documentation
 - Incomplete work, need to merge all components into one to be functional
 
-### Logic
+## Logic
 
 - Axios in component
 - Using 2 fetches
@@ -46,14 +49,14 @@ Open the browswer and write [http://localhost:3000](http://localhost:3000) and h
 - [x] show a message if no flights found
 - [x] Make data fetching from json file as dynamic
 - [x] Error: Request failed with status code 400 (Showing when removing all inputs from the input, cityNAmeT)
-- [ ] Implement a date
+- [x] The start date will fetch data of weather forecast
 - [ ] For Restricting date = https://stackoverflow.com/questions/32378590/set-date-input-fields-max-date-to-today
 - [ ] Make the toggle work
 - [ ] First make a demo frontend project, then add express to it.
 - [ ] Fetch data from server side, not client side as need to hit twice. So, need to use ExpressJS
 - [ ] If Express is included, only then we can update the json file and edit the date to the date selected by the client
 
-### UI/UX
+## UI/UX
 
 - [x] Bring the design in one place
 - [x] price arrow button should increase size when hover
