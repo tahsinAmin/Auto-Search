@@ -19,9 +19,9 @@ Open the browswer and write [http://localhost:3000](http://localhost:3000) and h
 # Features
 
 - To check weather data In first input, search for "Vancouver , Canada, Vancouver International Airport (YVR)" and for second input, search for "Dhaka, Bangladesh, Hazrat Shahjalal International Airport (DAC)".
-  (Note:If it doesn't work for the first time, try again with the same input after 3 seconds)
+  (Note:If it doesn't work for the first time, try again with the same input 3 seconds after closing the error modal)
 - No flights available if input is given Toronto to Dhaka
-- for a given future date, it shows a weather forecast of what wheather likely to be on that whole day
+- for a given future date, it shows a weather forecast of what wheather likely to be on that whole day. (Note: Weatherforecast available for the next 14 days from now)
 
 # Tasks, Todos & Problems face while making the project (Optional)
 
@@ -30,6 +30,7 @@ Open the browswer and write [http://localhost:3000](http://localhost:3000) and h
 - Make mobile friendly (integrate tap and swipe actions)
 - Improve README.md documentation
 - Incomplete work, need to merge all components into one to be functional
+- Divide code into useful components (More convenient approach, makes it more readable and share codes as a component)
 
 ## Logic
 
@@ -50,7 +51,7 @@ Open the browswer and write [http://localhost:3000](http://localhost:3000) and h
 - [x] Make data fetching from json file as dynamic
 - [x] Error: Request failed with status code 400 (Showing when removing all inputs from the input, cityNAmeT)
 - [x] The start date will fetch data of weather forecast
-- [ ] For Restricting date = https://stackoverflow.com/questions/32378590/set-date-input-fields-max-date-to-today
+- [ ] Restrict date from today to next 14 days
 - [ ] Make the toggle work
 - [ ] First make a demo frontend project, then add express to it.
 - [ ] Fetch data from server side, not client side as need to hit twice. So, need to use ExpressJS
@@ -65,8 +66,8 @@ Open the browswer and write [http://localhost:3000](http://localhost:3000) and h
 - [x] Hero image added
 - [x] Add stops and duration over the plane
 - [x] Make the weather show dynamically toCity input only
-- [ ] the date that client selects, make sure that date's weather is showing.
 - [ ] rename the weather section guive a headiong to show that it's the desintations' weather, like weather forecast of {destinationName}
+- [ ] Add image to your repo
 - ~~Have the live link in GitHub~~
 - [ ] Suggestion box needs to be bigger to click
 - [ ] In the hero section, make it cenbter, at the left, there's a text and at the right we have the input
@@ -127,6 +128,7 @@ cityNameT.split(",")[0].replace(/^\s+|\s+$/g, "").toLocaleLowerCase()
 - Adding fonts in ReactJS
 - Learned how to save data in the placeholder => placholder = {placeHold || "Search..."} then deconstruct it in the functional parameters
 - All HTTP response status codes that are in the 4xx category are considered client error responses
+- Sometimes Date in the url api can be in different format but still works (e.g. 2021.1.10, 2021-1-10)
 
 ## For Refactor
 

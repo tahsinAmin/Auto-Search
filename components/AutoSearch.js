@@ -19,6 +19,14 @@ function AutoSearch() {
   const [weatherForecast, setWeatherForecast] = useState([]);
   const [weatherFound, setWeatherFound] = useState(false);
 
+  const disablePastDate = () => {
+    const today = new Date();
+    const dd = String(today.getDate() + 1).padStart(2, "0");
+    const mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
+    const yyyy = today.getFullYear();
+    return yyyy + "-" + mm + "-" + dd;
+  };
+
   const loadCities = async (cityName) => {
     const response = await axios.get(
       `https://api.sharetrip.net/api/v1/flight/search/airport?name=${cityName}`
@@ -267,6 +275,7 @@ function AutoSearch() {
         <div className="container mx-auto">
           <input
             type="date"
+            min={disablePastDate()}
             name="input-search-2"
             className="border rounded-sm w-full mt-4"
             placeholder="To...."
@@ -393,14 +402,11 @@ function AutoSearch() {
       <main className="container max-w-7xl mx-auto mt-10">
         {weatherFound && (
           <section className="weather">
-            <h1 className="text-xl font-bold">Select departing flights</h1>
-            <div className="flex space-x-8 mt-4 items-center">
-              <div className="flex space-x-4">
-                <FaPlaneDeparture />
-                <h2 className="uppercase">
-                  <b>{cityNO}</b> - <b>{cityNT}</b>
-                </h2>
-              </div>
+            <h1 className="text-2xl font-bold">Select departing flights</h1>
+            <div className="flex justify-end space-x-8 mt-4 items-center">
+              <h2 className="uppercase">
+                Weather Forecast of <b>{cityNT}</b>
+              </h2>
               {/* <span>
               Wed <b>17 Nov</b>
             </span> */}
@@ -410,10 +416,10 @@ function AutoSearch() {
             display-weather
             my-2
             rounded-lg
-            h-[245px]
+            h-[200px]
             grid grid-cols-4
             gap-4
-            p-4
+            
           "
             >
               <div
@@ -578,7 +584,7 @@ function AutoSearch() {
                       d="M3 4a1 1 0 011-1h16a1 1 0 011 1v2.586a1 1 0 01-.293.707l-6.414 6.414a1 1 0 00-.293.707V17l-4 4v-6.586a1 1 0 00-.293-.707L3.293 7.293A1 1 0 013 6.586V4z"
                     ></path>
                   </svg>
-                  <h2 className="text-2xl font-medium">
+                  <h2 className="text-xl font-medium">
                     <strike>Filter by:</strike>
                   </h2>
                 </div>
