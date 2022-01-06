@@ -76,6 +76,7 @@ Open the browswer and write [http://localhost:3000](http://localhost:3000) and h
 - [x] Add image to your repo
 - ~~Have the live link in GitHub~~
 - [x] Suggestion box needs to be bigger to click
+- [x] Put the input form inside the main design
 - [ ] Get the search button out of the flex
 - [ ] In the hero section, make it center, at the left, there's a text and at the right we have the input
 - [ ] Show search and date with modal
