@@ -404,7 +404,7 @@ function AutoSearch() {
           <section className="weather">
             <h1 className="text-2xl font-bold">Select departing flights</h1>
             <div className="flex justify-end space-x-8 mt-4 items-center">
-              <h2 className="uppercase">
+              <h2 className="uppercase rounded-sm p-2 border">
                 Weather Forecast of <b>{cityNT}</b>
               </h2>
               {/* <span>
@@ -681,7 +681,7 @@ function AutoSearch() {
                 </div>
               )}
 
-              <div className="flight-lists flex flex-col pl-4 drop-shadow-xl">
+              <div className="flight-lists flex space-y-1 flex-col pl-4 drop-shadow-xl">
                 {allFlights.map((f) => (
                   <div
                     className="
@@ -702,7 +702,7 @@ function AutoSearch() {
                         <div
                           className="badge
                     flex space-x-2 items-center
-                    bg-gray-700
+                    bg-white border
                     text-white text-xs
                     font-light
                     py-1.5
@@ -710,9 +710,9 @@ function AutoSearch() {
                     rounded-full
                   "
                         >
-                          <FaPlane className="h-3 w-3" />
+                          <FaPlane className="h-3 w-3 text-gray-500" />
                           <span
-                            className="font-bold text-gray-100 text-sm rounded"
+                            className="font-bold text-gray-500 text-sm rounded"
                             style={{ fontFamily: "Montserrat" }}
                           >
                             {f["flight_name"]}

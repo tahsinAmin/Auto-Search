@@ -23,6 +23,9 @@ Open the browswer and write [http://localhost:3000](http://localhost:3000) and h
 - No flights available if input is given Toronto to Dhaka
 - for a given future date, it shows a weather forecast of what wheather likely to be on that whole day. (Note: Weatherforecast available for the next 14 days from now)
 
+![flights](https://user-images.githubusercontent.com/29802879/148372088-d1c50338-e073-4451-a786-2c8367d79788.png)
+![noFlights](https://user-images.githubusercontent.com/29802879/148372173-f2f1a922-5c5d-41c9-a745-65eeb6b0ab69.png)
+
 # Tasks, Todos & Problems face while making the project (Optional)
 
 ## TODOs
@@ -79,7 +82,6 @@ Open the browswer and write [http://localhost:3000](http://localhost:3000) and h
 
 - [ ] Remove countryName variable if not needed
 - [ ] Better fonts needed
-
 - [ ] Is there a way to figure out if any of my npm packages is unused or installed by mistake?
 
 ## Npm pakages needed
