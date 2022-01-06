@@ -34,6 +34,7 @@ Open the browswer and write [http://localhost:3000](http://localhost:3000) and h
 - Using 2 fetches
 - showing country name
 - showiung weather data
+- demo text
 
 - [x] Able to Fetch data from local json file in ReactJS
 - [x] Able to show json data in page
