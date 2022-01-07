@@ -58,7 +58,7 @@ Open the browswer and write [http://localhost:3000](http://localhost:3000) and h
 - [x] Make data fetching from json file as dynamic
 - [x] Error: Request failed with status code 400 (Showing when removing all inputs from the input, cityNAmeT)
 - [x] The start date will fetch data of weather forecast
-- [ ] Add Rapid API
+- [x] Add Rapid API
 - [ ] Restrict date from today to next 14 days
 - [ ] Make the toggle work
 - [ ] First make a demo frontend project, then add express to it.
