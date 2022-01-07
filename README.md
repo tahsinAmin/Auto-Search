@@ -58,6 +58,7 @@ Open the browswer and write [http://localhost:3000](http://localhost:3000) and h
 - [x] Make data fetching from json file as dynamic
 - [x] Error: Request failed with status code 400 (Showing when removing all inputs from the input, cityNAmeT)
 - [x] The start date will fetch data of weather forecast
+- [ ] Add Rapid API
 - [ ] Restrict date from today to next 14 days
 - [ ] Make the toggle work
 - [ ] First make a demo frontend project, then add express to it.
@@ -77,7 +78,6 @@ Open the browswer and write [http://localhost:3000](http://localhost:3000) and h
 - ~~Have the live link in GitHub~~
 - [x] Suggestion box needs to be bigger to click
 - [x] Put the input form inside the main design
-- [ ] Get the search button out of the flex
 - [ ] In the hero section, make it center, at the left, there's a text and at the right we have the input
 - [ ] Show search and date with modal
 - [ ] Have a loading div to show that the data is processing
