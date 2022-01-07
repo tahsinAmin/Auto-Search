@@ -19,7 +19,7 @@ Open the browswer and write [http://localhost:3000](http://localhost:3000) and h
 # Features
 
 - To check weather data In first input, search for "Vancouver , Canada, Vancouver International Airport (YVR)" and for second input, search for "Dhaka, Bangladesh, Hazrat Shahjalal International Airport (DAC)".
-  (Note:If it doesn't work for the first time, try again with the same input 3 seconds after closing the error modal)
+  (Note:If it doesn't work for the first time, click the search button again after 2/3 seconds)
 - No flights available if input is given Toronto to Dhaka
 - for a given future date, it shows a weather forecast of what wheather likely to be on that whole day. (Note: Weatherforecast available for the next 14 days from now)
 

@@ -19,7 +19,7 @@ function AutoSearch() {
   const [countryNameO, setCountryNameO] = useState("");
   const [countryNameT, setCountryNameT] = useState("");
   const [startDate, setStartDate] = useState("");
-  const [departDate, setDepartDate] = useState("");
+
   const [flightsFound, setFlightsFound] = useState(false);
   const [suggestionsO, setSuggestionsO] = useState([]);
   const [suggestionsT, setSuggestionsT] = useState([]);
@@ -80,11 +80,6 @@ function AutoSearch() {
     setCityNameT(cityName);
   };
 
-  const onChangeHandlerDate = (inpDate) => {
-    setDepartDate(inpDate);
-    console.log(inpDate);
-  };
-
   const handleSubmit = (e) => {
     e.preventDefault();
     setCountryNameT(
@@ -111,12 +106,27 @@ function AutoSearch() {
         .replace(/^\s+|\s+$/g, "")
         .toLocaleLowerCase()
     );
+
     // http://api.weatherapi.com/v1/forecast.json?key=e6a73467a3e94aa184c122435212812&q=toronto&dt=2022.01.20
     // `https://api.weatherapi.com/v1/history.json?key=e6a73467a3e94aa184c122435212812&q=${countryNameT}&q=${cityNT}&dt=2021.12.30&aqi=yes`
+    // `http://api.weatherapi.com/v1/forecast.json?key=e6a73467a3e94aa184c122435212812&q=${cityNT}&dt=${startDate}`
+    // axios
+    //   .get(
+    //     `https://weatherapi-com.p.rapidapi.com/forecast.json?key=d69b09c0bamsh8f1f2babcf13062p10d105jsnb3ff4c0ce725&q=london&dt=2022-01-14`
+    //   )
+
+    let options = {
+      method: "GET",
+      url: "https://weatherapi-com.p.rapidapi.com/forecast.json",
+      params: { q: cityNT, days: "1", dt: startDate },
+      headers: {
+        "x-rapidapi-host": "weatherapi-com.p.rapidapi.com",
+        "x-rapidapi-key": "d69b09c0bamsh8f1f2babcf13062p10d105jsnb3ff4c0ce725",
+      },
+    };
+
     axios
-      .get(
-        `http://api.weatherapi.com/v1/forecast.json?key=e6a73467a3e94aa184c122435212812&q=${cityNT}&dt=${startDate}`
-      )
+      .request(options)
       .then((res) => {
         const hour = res.data.forecast.forecastday[0].hour;
         // console.log("+-" + countryNameT + "--" + cityNT + "--+");
@@ -171,6 +181,9 @@ function AutoSearch() {
           data[0]["2022-01-10"][countryNameT][cityNT][countryNameO][cityNO]
         );
         setFlightsFound(true);
+      })
+      .catch(function (error) {
+        console.error(error);
       });
   };
   return (
@@ -366,11 +379,12 @@ function AutoSearch() {
           <div>
             <button
               type="submit"
-              className="bg-[#00CD92] text-white font-semibold p-2 rounded-lg hover:scale-105 hover:bg-gray-900
+              className="bg-[#00CD92] text-white p-2 rounded-lg hover:scale-105 hover:bg-gray-900
               transform
               transition
               duration-300
-              ease-out"
+              ease-out
+              text-2xl font-medium"
             >
               Search Flights
             </button>
