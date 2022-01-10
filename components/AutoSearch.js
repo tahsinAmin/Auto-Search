@@ -291,18 +291,19 @@ function AutoSearch() {
             <span className="font-semibold rounded"> Agadir | Morocco</span>
           </div>
         </div>
+        {/* bg-black bg-opacity-50 hover:bg-opacity-80 */}
         <form
+          style={{ backgroundColor: "rgba(255, 255, 255, 0.8)" }}
           className="
             input-form  w-1/2
             p-4
             px-5
             rounded-lg
-            bg-black bg-opacity-50 hover:bg-opacity-80
             transform
-              transition
-              duration-300
-              ease-out
-            text-white
+            transition
+            duration-300
+            ease-out
+            text-black
             flex flex-col
             space-y-10
           "
@@ -313,11 +314,11 @@ function AutoSearch() {
             <sup className="text-sm">TM</sup>
           </h1>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-1">
-            <div className="going-from  p-1 border-gray-100 border-b-2 ">
+            <div className="going-from  p-1 border-gray-800 border-b-2 ">
               <input
                 type="text"
                 name="input-search"
-                className="w-full mt-4 placeholder-gray-100 bg-transparent outline-none text-2xl truncate"
+                className="w-full mt-4 placeholder-gray-800 bg-transparent outline-none text-2xl truncate"
                 placeholder="Going from:"
                 onChange={(e) => onChangeHandlerO(e.target.value)}
                 value={cityNameO}
@@ -339,11 +340,11 @@ function AutoSearch() {
                 ))}
             </div>
 
-            <div className="container p-1 border-gray-100 border-b-2 outline-none">
+            <div className="container p-1 border-gray-800 border-b-2 outline-none">
               <input
                 type="text"
                 name="input-search-2"
-                className=" w-full mt-4 placeholder-gray-100 bg-transparent outline-none text-2xl truncate"
+                className=" w-full mt-4 placeholder-gray-800 bg-transparent outline-none text-2xl truncate"
                 placeholder="Going to:"
                 onChange={(e) => onChangeHandlerT(e.target.value)}
                 value={cityNameT}
@@ -370,7 +371,7 @@ function AutoSearch() {
             <DatePicker
               selected={startDate}
               onChange={(date) => setStartDate(date)}
-              className="border-gray-100 border-b-2 text-2xl truncate placeholder-gray-100 bg-transparent outline-none"
+              className="border-gray-800  border-b-2 text-2xl truncate placeholder-gray-100 bg-transparent outline-none"
             />
           </div>
           <div>

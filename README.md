@@ -80,7 +80,7 @@ Open the browswer and write [http://localhost:3000](http://localhost:3000) and h
 - [x] Suggestion box needs to be bigger to click
 - [x] Put the input form inside the main design
 - [x] Change the icon for sort toggle
-- [ ] white bg form
+- [x] white bg form
 - [ ] In the hero section, make it center, at the left, there's a text and at the right we have the input
 - [ ] Show search and date with modal
 - [ ] Have a loading div to show that the data is processing
