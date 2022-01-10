@@ -6,19 +6,6 @@
           "canada": {
             "vancouver": [
               {
-                "duration": "24 hr 35 min",
-                "flight_name": "Canadian Airlines",
-                "end_place": "Vancouvar",
-                "end_iata": "VAN",
-                "end_time": "2021-01-11 00:50",
-                "price": "25000",
-                "seats_avail": "17",
-                "start_place": "Dhaka",
-                "start_iata": "DAC",
-                "start_time": "2021-01-10 00:15",
-                "stops": "2"
-              },
-              {
                 "duration": "35 min",
                 "flight_name": "Qatar Airlines",
                 "end_place": "Vancouvar",
@@ -30,6 +17,19 @@
                 "start_iata": "DAC",
                 "start_time": "2021-01-10 00:15",
                 "stops": "0"
+              },
+              {
+                "duration": "24 hr 35 min",
+                "flight_name": "Canadian Airlines",
+                "end_place": "Vancouvar",
+                "end_iata": "VAN",
+                "end_time": "2021-01-11 00:50",
+                "price": "25000",
+                "seats_avail": "17",
+                "start_place": "Dhaka",
+                "start_iata": "DAC",
+                "start_time": "2021-01-10 00:15",
+                "stops": "2"
               },
               {
                 "duration": "1 hr 35 min",

@@ -18,9 +18,9 @@ function AutoSearch() {
   const [cityNT, setCityNT] = useState("");
   const [countryNameO, setCountryNameO] = useState("");
   const [countryNameT, setCountryNameT] = useState("");
-  const [startDate, setStartDate] = useState("");
-
   const [flightsFound, setFlightsFound] = useState(false);
+  const [sortIconToggle, setSortIconToggle] = useState(false);
+  const [startDate, setStartDate] = useState("");
   const [suggestionsO, setSuggestionsO] = useState([]);
   const [suggestionsT, setSuggestionsT] = useState([]);
   const [weatherForecast, setWeatherForecast] = useState([]);
@@ -57,8 +57,13 @@ function AutoSearch() {
     setSuggestionsT([]);
   };
   const toggleSort = () => {
+    setSortIconToggle(!sortIconToggle);
     let sorted = allFlights.sort((a, b) => {
-      return a.price - b.price;
+      if (!sortIconToggle) {
+        return a.price - b.price;
+      } else {
+        return b.price - a.price;
+      }
     });
 
     setAllFlights([...sorted]);
@@ -619,40 +624,43 @@ function AutoSearch() {
                   <div className="flex space-x-10 text-blue-600">
                     <div className="flex space-x-1">
                       <span className=" active text-gray-700 font-semibold">
-                        <strike>Pricing</strike>
+                        Pricing
                       </span>
                       <div
                         onClick={toggleSort}
                         className="h-10 rounded-lg flex cursor-pointer hover:scale-105 transform transition duration-300 ease-out"
                       >
-                        <svg
-                          class="down-price price-toggle w-7 h-7 text-gray-800 font-semibold"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M16 17l-4 4m0 0l-4-4m4 4V3"
-                          ></path>
-                        </svg>
-                        <svg
-                          class="up-price hidden price-toggle w-7 h-7 text-gray-800 font-semibold"
-                          fill="none"
-                          stroke="currentColor"
-                          viewBox="0 0 24 24"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            stroke-linecap="round"
-                            stroke-linejoin="round"
-                            stroke-width="2"
-                            d="M8 7l4-4m0 0l4 4m-4-4v18"
-                          ></path>
-                        </svg>
+                        {sortIconToggle ? (
+                          <svg
+                            class="down-price price-toggle w-7 h-7 text-gray-800 font-semibold"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M16 17l-4 4m0 0l-4-4m4 4V3"
+                            ></path>
+                          </svg>
+                        ) : (
+                          <svg
+                            class="up-price price-toggle w-7 h-7 text-gray-800 font-semibold"
+                            fill="none"
+                            stroke="currentColor"
+                            viewBox="0 0 24 24"
+                            xmlns="http://www.w3.org/2000/svg"
+                          >
+                            <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2"
+                              d="M8 7l4-4m0 0l4 4m-4-4v18"
+                            ></path>
+                          </svg>
+                        )}
                       </div>
                     </div>
 

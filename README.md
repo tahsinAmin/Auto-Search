@@ -59,7 +59,7 @@ Open the browswer and write [http://localhost:3000](http://localhost:3000) and h
 - [x] Error: Request failed with status code 400 (Showing when removing all inputs from the input, cityNAmeT)
 - [x] The start date will fetch data of weather forecast
 - [x] Add Rapid API
-- [x] Sort array of objects for price property
+- [x] Sort array of objects for price property. Both Ascending and Descending.
 - [ ] Restrict date from today to next 14 days
 - [ ] Make the toggle work
 - [ ] First make a demo frontend project, then add express to it.
@@ -79,7 +79,7 @@ Open the browswer and write [http://localhost:3000](http://localhost:3000) and h
 - ~~Have the live link in GitHub~~
 - [x] Suggestion box needs to be bigger to click
 - [x] Put the input form inside the main design
-- [ ] Change the icon
+- [x] Change the icon for sort toggle
 - [ ] white bg form
 - [ ] In the hero section, make it center, at the left, there's a text and at the right we have the input
 - [ ] Show search and date with modal
