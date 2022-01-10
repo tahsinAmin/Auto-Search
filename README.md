@@ -59,6 +59,7 @@ Open the browswer and write [http://localhost:3000](http://localhost:3000) and h
 - [x] Error: Request failed with status code 400 (Showing when removing all inputs from the input, cityNAmeT)
 - [x] The start date will fetch data of weather forecast
 - [x] Add Rapid API
+- [x] Sort array of objects for price property
 - [ ] Restrict date from today to next 14 days
 - [ ] Make the toggle work
 - [ ] First make a demo frontend project, then add express to it.
@@ -78,6 +79,8 @@ Open the browswer and write [http://localhost:3000](http://localhost:3000) and h
 - ~~Have the live link in GitHub~~
 - [x] Suggestion box needs to be bigger to click
 - [x] Put the input form inside the main design
+- [ ] Change the icon
+- [ ] white bg form
 - [ ] In the hero section, make it center, at the left, there's a text and at the right we have the input
 - [ ] Show search and date with modal
 - [ ] Have a loading div to show that the data is processing
@@ -120,6 +123,33 @@ Open the browswer and write [http://localhost:3000](http://localhost:3000) and h
 ```bash
 cityNameT.split(",")[0].replace(/^\s+|\s+$/g, "").toLocaleLowerCase()
 ```
+
+- [x] Unable to sort a list of objects.
+      What I was doing:
+
+```
+  const toggleSort = () => {
+    let sorted = allFlights.sort((a, b) => {
+      return a.price - b.price;
+    });
+
+    setAllFlights(sorted);
+  };
+```
+
+What it sahould be:
+
+```
+  const toggleSort = () => {
+    let sorted = allFlights.sort((a, b) => {
+      return a.price - b.price;
+    });
+
+    setAllFlights([...sorted]);
+  };
+```
+
+- [ ] the solution above. Why is it like that?
 
 - [ ] When I type, the heading also changes with it.
 - [ ] when I hit search button twice, it gives an error. Probably due to "Dhaka" and not "dhaka"

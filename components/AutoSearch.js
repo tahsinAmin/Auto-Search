@@ -26,14 +26,6 @@ function AutoSearch() {
   const [weatherForecast, setWeatherForecast] = useState([]);
   const [weatherFound, setWeatherFound] = useState(false);
 
-  const disablePastDate = () => {
-    const today = new Date();
-    const dd = String(today.getDate() + 1).padStart(2, "0");
-    const mm = String(today.getMonth() + 1).padStart(2, "0"); //January is 0!
-    const yyyy = today.getFullYear();
-    return yyyy + "-" + mm + "-" + dd;
-  };
-
   const loadCities = async (cityName) => {
     const response = await axios.get(
       `https://api.sharetrip.net/api/v1/flight/search/airport?name=${cityName}`
@@ -64,6 +56,14 @@ function AutoSearch() {
     setCityNameT(textMerged);
     setSuggestionsT([]);
   };
+  const toggleSort = () => {
+    let sorted = allFlights.sort((a, b) => {
+      return a.price - b.price;
+    });
+
+    setAllFlights([...sorted]);
+  };
+
   const onChangeHandlerT = (cityName) => {
     if (!cityName) {
       setWeatherFound(false);
@@ -106,14 +106,6 @@ function AutoSearch() {
         .replace(/^\s+|\s+$/g, "")
         .toLocaleLowerCase()
     );
-
-    // http://api.weatherapi.com/v1/forecast.json?key=e6a73467a3e94aa184c122435212812&q=toronto&dt=2022.01.20
-    // `https://api.weatherapi.com/v1/history.json?key=e6a73467a3e94aa184c122435212812&q=${countryNameT}&q=${cityNT}&dt=2021.12.30&aqi=yes`
-    // `http://api.weatherapi.com/v1/forecast.json?key=e6a73467a3e94aa184c122435212812&q=${cityNT}&dt=${startDate}`
-    // axios
-    //   .get(
-    //     `https://weatherapi-com.p.rapidapi.com/forecast.json?key=d69b09c0bamsh8f1f2babcf13062p10d105jsnb3ff4c0ce725&q=london&dt=2022-01-14`
-    //   )
 
     let options = {
       method: "GET",
@@ -176,7 +168,7 @@ function AutoSearch() {
         setWeatherFound(true);
       })
       .then((res) => {
-        console.log(countryNameT, cityNT, countryNameO, cityNO);
+        // console.log(countryNameT, cityNT, countryNameO, cityNO);
         setAllFlights(
           data[0]["2022-01-10"][countryNameT][cityNT][countryNameO][cityNO]
         );
@@ -630,11 +622,8 @@ function AutoSearch() {
                         <strike>Pricing</strike>
                       </span>
                       <div
-                        className="h-10 rounded-lg flex cursor-pointer hover:scale-105
-                transform
-                transition
-                duration-300
-                ease-out"
+                        onClick={toggleSort}
+                        className="h-10 rounded-lg flex cursor-pointer hover:scale-105 transform transition duration-300 ease-out"
                       >
                         <svg
                           class="down-price price-toggle w-7 h-7 text-gray-800 font-semibold"
